@@ -1,0 +1,53 @@
+pipeline:
+    inputs:
+        - name: http_loader
+          url: https://defense.conferdeploy.net/api/alerts/v7/orgs/ABCD1234/alerts/_search
+          header: |-
+              Content-Type: application/json
+              X-Auth-Token: {{secrets.blackCarbonAuthToken}}
+          body: |-
+              {{- $now := now.UTC.Truncate (parseDuration "1h") -}}
+              {{- $timeStart := $now | mustDateModify "-1h" -}}
+              {{- $timeEnd := $now -}}
+              {{- $start := 1 -}}
+ 
+              {{- if and .Request .Response -}}
+                  {{- $prevTimeEnd := .Request.Body.time_range.end | mustToDate timeRFC3339 -}}
+                  {{- $start = add .Request.Body.start 5 -}}
+                  {{- if or (empty .Response.Body.results) (lt (len .Response.Body.results) 5) -}}
+                      {{- $timeStart = $prevTimeEnd -}}
+                      {{- $timeEnd = ($timeStart | mustDateModify "+1h") -}}
+                      {{- $start = 1 -}}
+                  {{- end -}}
+ 
+                  {{- if $timeEnd.Before $prevTimeEnd -}}
+                      {{- $timeEnd = $prevTimeEnd -}}
+                      {{- $timeStart = ($timeEnd | mustDateModify "-1h") -}}
+                  {{- end -}}
+              {{- end -}}
+ 
+              {"time_range":{"start":"{{$timeStart.Format timeRFC3339}}","end":"{{$timeEnd.Format timeRFC3339}}"},"start":{{$start}},"rows":5}
+          out: |-
+              {{toJson .Response.Body.results}}
+          skip: |-
+              {{or (ge .Response.StatusCode 400) (empty .Response.Body.results)}}
+          pull_interval: |-
+              {{- if ge .Response.StatusCode 400 -}}
+                10s
+              {{- else -}}
+                {{- $interval := parseDuration "100ms" -}}
+ 
+                {{- if or (empty .Response.Body.results) (lt (len .Response.Body.results) 5) -}}
+                    {{- $interval = parseDuration "1h" -}}
+                    {{- $currentTimeEnd := .Request.Body.time_range.end | mustToDate timeRFC3339 -}}
+                    {{- $nextTimeEnd := $currentTimeEnd.Add $interval -}}
+                    {{- if $nextTimeEnd.After now -}}
+                        {{- $interval = $nextTimeEnd.Sub now -}}
+                        {{- if le $interval.Nanoseconds 0 -}}
+                            {{- $interval = parseDuration "1ns" -}}
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+ 
+                {{$interval}}
+              {{- end -}}

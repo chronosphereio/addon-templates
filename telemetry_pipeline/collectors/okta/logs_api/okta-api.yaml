@@ -1,0 +1,42 @@
+pipeline:
+  inputs:
+    - Name: http_loader
+      alias: http_alias_collector
+      url: |-
+        {{- with get_variable "next_link" -}}
+          {{.}}
+        {{- else -}}
+          https://{{ domain_name }}/api/v1/logs
+        {{- end -}}
+      method: GET
+      header: "Authorization: SSWS {{ secrets.okta_token }}"
+      pull_interval: |-
+        {{- if eq .Response.StatusCode 429 -}}
+          {{- with .Response.Header.Get "X-Rate-Limit-Reset" -}}
+            {{- $resetAt := timeUnix (. | int64) -}}
+            {{- $waitFor := $resetAt.Sub $.LastRequestTime -}}
+            {{- if le $waitFor 0 -}}
+              10s
+            {{- else -}}
+              {{- logf "rate limiting reached, waiting %s" $waitFor -}}
+              {{- $waitFor -}}
+            {{- end -}}
+          {{- else -}}
+            {{- log "rate limiting reached, no reset info, waiting 30s" -}}
+            30s
+          {{- end -}}
+        {{- else -}}
+          10s
+        {{- end -}}
+      wait: 30s
+      retry: "false"
+      max_retries: "1"
+      stop: "false"
+      auth_cookie_method: GET
+      data_dir: /data/storage
+      out: |-
+        {{- with nextLink .Response.Header -}}
+          {{- set_variable "next_link" . -}}
+        {{- end -}}
+        {{toJson .Response.Body}}
+      tag: undefined.da271f97-45f9-49e4-910d-4a41bd195010

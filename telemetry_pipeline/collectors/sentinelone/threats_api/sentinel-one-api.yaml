@@ -1,0 +1,52 @@
+pipeline:
+    inputs:
+        - name: http_loader
+          url: |-
+            {{- $now := now.UTC.Truncate (parseDuration "1h") -}}
+            {{- $start := $now | mustDateModify "-1h" -}}
+            {{- $end := $now -}}
+ 
+            {{- if and .Request .Response -}}
+                {{- $prevEnd := .Request.URL.Query.Get "updatedAt__lte" | mustToDate timeRFC3339 -}}
+                {{- if (empty .Response.Body.pagination.nextCursor) -}}
+                    {{- $start = $prevEnd -}}
+                    {{- $end = ($start | mustDateModify "+1h") -}}
+                {{- end -}}
+ 
+                {{- if $end.Before $prevEnd -}}
+                    {{- $end = $prevEnd -}}
+                    {{- $start = ($end | mustDateModify "-1h") -}}
+                {{- end -}}
+            {{- end -}}
+ 
+            https://usea1-partners.sentinelone.net/web/api/v2.1/threats?updatedAt__gte={{$start.Format timeRFC3339}}&updatedAt__lte={{$end.Format timeRFC3339}}&limit=5{{with .Response.Body.pagination.nextCursor}}&cursor={{.}}{{end}}
+          out: |-
+              {{toJson .Response.Body.data}}
+          skip: |-
+              {{or (ge .Response.StatusCode 400) (not (empty .Response.Body.errors)) (empty .Response.Body.data)}}
+          pull_interval: |-
+              {{- if or (ge .Response.StatusCode 400) (not (empty .Response.Body.errors)) -}}
+                10s
+              {{- else -}}
+                {{- $interval := parseDuration "100ms" -}}
+ 
+                {{- if empty .Response.Body.pagination.nextCursor -}}
+                    {{- $interval = parseDuration "1h" -}}
+                    {{- $currentEnd := .Request.URL.Query.Get "updatedAt__lte" | mustToDate timeRFC3339 -}}
+                    {{- $nextEnd := $currentEnd.Add $interval -}}
+                    {{- if $nextEnd.After now -}}
+                        {{- $interval = $nextEnd.Sub now -}}
+                        {{- if le $interval.Nanoseconds 0 -}}
+                            {{- $interval = parseDuration "1ns" -}}
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+ 
+                {{$interval}}
+              {{- end -}}
+          auth_cookie_url: |-
+            https://usea1-partners.sentinelone.net/web/api/v2.1/users/login/by-api-token
+          auth_cookie_body: |-
+            {"data": {"apiToken": "{{secrets.sentinelOneAPIToken}}"}}
+          auth_cookie_header: |-
+            Content-Type: application/json

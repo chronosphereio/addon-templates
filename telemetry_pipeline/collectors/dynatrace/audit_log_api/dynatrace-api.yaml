@@ -1,0 +1,53 @@
+pipeline:
+    inputs:
+        - Name: http_loader
+          url: |-
+              {{- $environmentID := "ggy66547" -}}
+              {{- with .Response.Body.nextPageKey -}}
+                  https://{{$environmentID}}.live.dynatrace.com/api/v2/auditlogs?nextPageKey={{.}}
+              {{- else -}}
+                  {{- $now := now.UTC.Truncate (parseDuration "1h") -}}
+                  {{- $from := $now | mustDateModify "-1h" -}}
+                  {{- $to := $now -}}
+ 
+                  {{- if has_variable "to" -}}
+                      {{- $prevTo := get_variable "to" | mustToDate timeRFC3339 -}}
+                      {{- $from = $prevTo -}}
+                      {{- $to = ($from | mustDateModify "+1h") -}}
+ 
+                      {{- if $to.Before $prevTo -}}
+                          {{- $to = $prevTo -}}
+                          {{- $from = ($to | mustDateModify "-1h") -}}
+                      {{- end -}}
+                  {{- end -}}
+ 
+                  {{- set_variable "to" ($to.Format timeRFC3339) -}}
+ 
+                  https://{{$environmentID}}.live.dynatrace.com/api/v2/auditlogs?from={{$from.Format timeRFC3339}}&to={{$to.Format timeRFC3339}}&sort=timestamp&pageSize=10
+              {{- end -}}
+          header: "Authorization: Api-Token {{secrets.dynatraceAPIToken}}"
+          out: |-
+              {{toJson .Response.Body.auditLogs}}
+          skip: |-
+              {{or (ge .Response.StatusCode 400) (empty .Response.Body.auditLogs)}}
+          pull_interval: |-
+              {{- if ge .Response.StatusCode 400 -}}
+                {{ log "error:" .Response.Body }}
+                10s
+              {{- else -}}
+                {{- $interval := parseDuration "100ms" -}}
+ 
+                {{- if empty .Response.Body.nextPageKey -}}
+                    {{- $interval = parseDuration "1h" -}}
+                    {{- $currentTo := get_variable "to" | mustToDate timeRFC3339 -}}
+                    {{- $nextTo := $currentTo.Add $interval -}}
+                    {{- if $nextTo.After now -}}
+                        {{- $interval = $nextTo.Sub now -}}
+                        {{- if le $interval.Nanoseconds 0 -}}
+                            {{- $interval = parseDuration "1ns" -}}
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+ 
+                {{$interval}}
+              {{- end -}}
