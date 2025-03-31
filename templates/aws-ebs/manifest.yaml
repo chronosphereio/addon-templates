@@ -1,0 +1,33 @@
+tech_type: aws-ebs
+tags:
+  - amazon
+  - aws
+  - cloud
+  - storage
+icon: bi-amazon
+data_source_and_docs:
+  - title: AWS EBS Documentation
+    url: https://docs.aws.amazon.com/ebs/latest/userguide/using_cloudwatch_ebs.html
+asset_list:
+  - asset_type: Collection
+    name: aws
+    slug: aws-collection
+    file: aws-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: aws
+    slug: aws-team
+    file: aws-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: Amazon EBS
+    slug: amazon-ebs
+    file: amazon-ebs-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Provides visibility for all essential metrics related to amazon ebs.
+      amazon elastic block store (amazon ebs) is an easy-to-use, scalable, high-performance
+      block-storage service designed for amazon elastic compute cloud (amazon ec2).

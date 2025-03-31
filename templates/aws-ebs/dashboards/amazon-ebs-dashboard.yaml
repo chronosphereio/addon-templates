@@ -1,0 +1,25 @@
+api_version: v1/config
+kind: Dashboard
+spec:
+  slug: amazon-ebs
+  name: Amazon EBS
+  collection_slug: aws-collection
+  dashboard_json:
+    '{"kind":"Dashboard","spec":{"datasource":null,"duration":"1d","layouts":[{"kind":"Grid","spec":{"display":{"collapse":{"open":true},"title":"Amazon
+    EBS Metrics"},"items":[{"content":{"$ref":"#/spec/panels/QueueLength"},"height":6,"width":24,"x":0,"y":0},{"content":{"$ref":"#/spec/panels/ReadsVolume"},"height":7,"width":24,"x":0,"y":20},{"content":{"$ref":"#/spec/panels/ReadOperations"},"height":7,"width":24,"x":0,"y":13},{"content":{"$ref":"#/spec/panels/ReadTime"},"height":7,"width":24,"x":0,"y":6}]}}],"panels":{"QueueLength":{"kind":"Panel","spec":{"display":{"description":"Average
+    number of queued I/O operations per EBS volume over the selected graph time range","name":"Average
+    Queue Length"},"formulas":[],"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"Table","position":"Bottom","size":"Medium","values":["Mean","LastNumber","Min","Max"]}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"aws_ebs_VolumeQueueLength_average{dimension_VolumeId=\"$volumeId\"}","series_name":{"name_pattern":"{{
+    __name__ }}","type":"Labels"}}}}}]}},"ReadOperations":{"kind":"Panel","spec":{"display":{"description":"Average
+    number of read & write operations per EBS volume over the selected graph time
+    range","name":"Average Read/Write Operations"},"formulas":[],"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"Table","position":"Bottom","size":"Medium","values":["Mean","LastNumber","Min","Max"]}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"aws_ebs_VolumeReadOps_average{dimension_VolumeId=\"${volumeId}\"}","series_name":{"name_pattern":"{{
+    __name__ }}","type":"Labels"}}}}},{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"aws_ebs_VolumeWriteOps_average{dimension_VolumeId=\"${volumeId}\"}","series_name":{"name_pattern":"{{
+    __name__ }}","type":"Labels"}}}}}]}},"ReadTime":{"kind":"Panel","spec":{"display":{"description":"Average
+    read, write & idle time (in seconds) per EBS volume over the selected graph time
+    range","name":"Average Read/Write/Idle Time (seconds)"},"formulas":[],"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"Table","position":"Bottom","size":"Medium","values":["Mean","LastNumber","Min","Max"]}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"aws_ebs_VolumeTotalReadTime_average{dimension_VolumeId=\"${volumeId}\"}","series_name":{"name_pattern":"{{
+    __name__ }}","type":"Labels"}}}}},{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"aws_ebs_VolumeTotalWriteTime_average{dimension_VolumeId=\"${volumeId}\"}","series_name":{"name_pattern":"{{
+    __name__ }}","type":"Labels"}}}}},{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"aws_ebs_VolumeIdleTime_average{dimension_VolumeId=\"${volumeId}\"}","series_name":{"name_pattern":"{{
+    __name__ }}","type":"Labels"}}}}}]}},"ReadsVolume":{"kind":"Panel","spec":{"display":{"description":"Average
+    read & write throughput (in bytes) per EBS volume over the selected graph time
+    range","name":"Average Read/Write Throughput"},"formulas":[],"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"Table","position":"Bottom","size":"Medium","values":["Mean","LastNumber","Min","Max"]},"y_axis":{"label":"","show":true,"unit":{"kind":"Bytes"}}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"aws_ebs_VolumeReadBytes_average{dimension_VolumeId=\"$volumeId\"}","series_name":{"name_pattern":"{{
+    __name__ }}","type":"Labels"}}}}},{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"aws_ebs_VolumeWriteBytes_average{dimension_VolumeId=\"$volumeId\"}","series_name":{"name_pattern":"{{
+    __name__ }}","type":"Labels"}}}}}]}}},"variables":[{"kind":"ListVariable","spec":{"allow_all_value":false,"allow_multiple":false,"default_value":"vol-0016bb3a6577faa92","name":"volumeId","plugin":{"kind":"PrometheusLabelValuesVariable","spec":{"label_name":"dimension_VolumeId","matchers":[]}},"refresh":"DashboardLoad"}}],"events":[]},"spec_version":"1"}'
