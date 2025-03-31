@@ -25,7 +25,7 @@ asset_list:
   - asset_type: Dashboard
     name: Amazon Redis
     slug: amazon-redis
-    file: amazon-redis-dashboard.yaml
+    file: dashboards/amazon-redis-dashboard.yaml
     config_required: 'no'
     author: Chronosphere
     source: CS

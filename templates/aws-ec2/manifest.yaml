@@ -24,7 +24,7 @@ asset_list:
   - asset_type: Dashboard
     name: Amazon EC2
     slug: amazon-ec2
-    file: amazon-ec2-dashboard.yaml
+    file: dashboards/amazon-ec2-dashboard.yaml
     config_required: 'no'
     author: Chronosphere
     source: CS

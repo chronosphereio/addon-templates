@@ -23,7 +23,7 @@ asset_list:
   - asset_type: Dashboard
     name: cAdvisor
     slug: cadvisor
-    file: cadvisor-dashboard.yaml
+    file: dashboards/cadvisor-dashboard.yaml
     config_required: 'no'
     author: Chronosphere
     source: CS
