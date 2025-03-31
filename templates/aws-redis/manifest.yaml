@@ -1,0 +1,32 @@
+tech_type: aws-redis
+tags:
+  - Amazon
+  - aws
+  - cloud
+  - compute
+  - Redis
+icon: bi-amazon
+data_source_and_docs:
+  - title: AWS Redis Documentation
+    url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights-Prometheus-Setup-redis-ecs.html
+asset_list:
+  - asset_type: Collection
+    name: aws
+    slug: aws-collection
+    file: aws-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: aws
+    slug: aws-team
+    file: aws-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: Amazon Redis
+    slug: amazon-redis
+    file: amazon-redis-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: A dashboard for monitoring essential metrics for aws redis. Redis OSS is an in-memory data store for use as a database, cache, message broker, queue, session store, and leaderboard. 

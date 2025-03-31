@@ -1,0 +1,31 @@
+tech_type: AWS
+tags:
+  - aws
+  - s3
+  - storage
+  - amazon
+icon: bi-amazon
+data_source_and_docs:
+  - title: Amazon S3 Storage
+    url: https://docs.aws.amazon.com/AmazonS3/latest/userguide/metrics-dimensions.html
+asset_list:
+  - asset_type: Collection
+    name: aws
+    slug: aws-collection
+    file: aws-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: aws
+    slug: aws-team
+    file: aws-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: Amazon S3
+    slug: amazon-s3
+    file: amazon-s3-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: ''
