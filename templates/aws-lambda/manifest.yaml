@@ -1,0 +1,35 @@
+tech_type: aws
+tags:
+  - Amazon
+  - aws
+  - cloud
+  - compute
+  - Lambda
+icon: bi-amazon
+data_source_and_docs:
+  - title: AWS Lambda Documentation
+    url: https://aws.amazon.com/blogs/opensource/integrating-the-aws-lambda-telemetry-api-with-prometheus-and-opensearch/
+asset_list:
+  - asset_type: Collection
+    name: aws
+    slug: aws-collection
+    file: aws-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: aws
+    slug: aws-team
+    file: aws-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: Amazon Lambda
+    slug: amazon-lambda
+    file: amazon-lambda-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: A dashboard for monitoring essential metrics for aws lambda. aws
+      lambda is a compute service that runs your code in response to events and automatically
+      manages the compute resources, making it the fastest way to turn an idea into
+      a modern, production, serverless applications.
