@@ -1,0 +1,6 @@
+api_version: v1/config
+kind: Collection
+spec:
+  slug: kubernetes-collection
+  name: kubernetes
+  team_slug: kubernetes-team
