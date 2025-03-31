@@ -1,4 +1,4 @@
-tech_type: aws
+tech_type: aws-lambda
 tags:
   - Amazon
   - aws
