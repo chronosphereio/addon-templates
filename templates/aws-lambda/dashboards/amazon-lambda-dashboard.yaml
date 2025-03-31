@@ -1,0 +1,27 @@
+api_version: v1/config
+kind: Dashboard
+spec:
+  slug: amazon-lambda
+  name: Amazon Lambda
+  collection_slug: aws-collection
+  dashboard_json: '{"kind":"Dashboard","spec":{"datasource":null,"duration":"1h","layouts":[{"kind":"Grid","spec":{"display":{"collapse":{"open":true},"title":"AWS
+    Lambda Metrics"},"items":[{"content":{"$ref":"#/spec/panels/TotalInvocations"},"height":6,"width":8,"x":0,"y":0},{"content":{"$ref":"#/spec/panels/Invocations"},"height":10,"width":12,"x":0,"y":6},{"content":{"$ref":"#/spec/panels/AverageDuration(seconds)"},"height":10,"width":12,"x":0,"y":16},{"content":{"$ref":"#/spec/panels/Throttles"},"height":10,"width":12,"x":12,"y":16},{"content":{"$ref":"#/spec/panels/ErrorRate"},"height":10,"width":12,"x":12,"y":6},{"content":{"$ref":"#/spec/panels/LambdaFunctions"},"height":6,"width":16,"x":8,"y":0}]}}],"panels":{"AverageDuration(seconds)":{"kind":"Panel","spec":{"display":{"description":"Average
+    duration in seconds per function over the selected graph time range","name":"Average
+    Duration (seconds)"},"formulas":[],"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"Table","position":"Bottom","size":"Medium","values":["Last"]},"y_axis":{"label":"","show":true,"unit":{"kind":"Seconds"}}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"avg
+    by(dimension_FunctionName) (aws_lambda_Duration_average{dimension_FunctionName!=\"\"})
+    / 1000","series_name":{"name_pattern":"{{ dimension_FunctionName }}  {{ dimension_Resource
+    }}","type":"Labels"}}}}}]}},"ErrorRate":{"kind":"Panel","spec":{"display":{"description":"Error
+    rate per function over the selected rolling interval","name":"Error Rate"},"formulas":[],"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"Table","position":"Bottom","size":"Medium","values":["Last"]}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"sum
+    by(dimension_FunctionName) (rate(aws_lambda_Errors_sum{dimension_FunctionName!=\"\"}[$interval]))
+    \n/\nsum by(dimension_FunctionName) (rate(aws_lambda_Invocations_sum{dimension_FunctionName!=\"\"}[$interval]))\n*
+    100","series_name":{"name_pattern":"{{ dimension_FunctionName }}","type":"Labels"}}}}}]}},"Invocations":{"kind":"Panel","spec":{"display":{"description":"Number
+    of invocations per function over the selected rolling interval","name":"Invocations"},"formulas":[],"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"Table","position":"Bottom","size":"Medium","values":["Last"]}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"sum
+    by (dimension_FunctionName) (increase(aws_lambda_Invocations_sum{dimension_FunctionName!=\"\"}[$interval]))","series_name":{"name_pattern":"{{
+    dimension_FunctionName }} {{ dimension_Resource }}","type":"Labels"}}}}}]}},"LambdaFunctions":{"kind":"Panel","spec":{"display":{"description":"Number
+    of invocations per function over the selected interval","name":"Lambda Functions"},"formulas":[],"links":[],"plugin":{"kind":"BarChart","spec":{"calculation":"LastNumber","mode":"value","sort":"desc","unit":{"abbreviate":true,"kind":"Decimal"}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"sum
+    by(dimension_FunctionName)(increase(aws_lambda_Invocations_sum{dimension_FunctionName!=\"\"}[$interval]))
+    ","series_name":{"name_pattern":"{{ dimension_FunctionName }}","type":"Labels"}}}}}]}},"Throttles":{"kind":"Panel","spec":{"display":{"description":"Number
+    of throttled invocation requests per function over the selected rolling interval","name":"Throttles"},"formulas":[],"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"Table","position":"Bottom","size":"Medium","values":["Last"]}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"sum
+    by (dimension_FunctionName) (increase(aws_lambda_Throttles_sum{dimension_FunctionName!=\"\"}[$interval]))","series_name":{"name_pattern":"{{
+    dimension_FunctionName }}  {{ dimension_Resource }}","type":"Labels"}}}}}]}},"TotalInvocations":{"kind":"Panel","spec":{"display":{"description":"Number
+    of invocations over the selected interval","name":"Total Invocations"},"formulas":[],"links":[],"plugin":{"kind":"StatChart","spec":{"calculation":"LastNumber","unit":{"kind":"Decimal"}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"sum(increase(aws_lambda_Invocations_sum{dimension_FunctionName!=\"\"}[$interval]))"}}}}]}}},"variables":[{"kind":"ListVariable","spec":{"allow_all_value":false,"allow_multiple":false,"default_value":"5m","display":{"name":"interval"},"name":"interval","plugin":{"kind":"StaticListVariable","spec":{"values":[{"label":"5m","value":"5m"},{"label":"15m","value":"15m"},{"label":"1h","value":"1h"},{"label":"1d","value":"1d"}]}},"refresh":"DashboardLoad"}}],"events":[]},"spec_version":"1"}'
