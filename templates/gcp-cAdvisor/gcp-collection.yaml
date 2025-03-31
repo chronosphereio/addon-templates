@@ -1,0 +1,6 @@
+api_version: v1/config
+kind: Collection
+spec:
+  slug: gcp-collection
+  name: gcp
+  team_slug: gcp-team
