@@ -24,7 +24,7 @@ asset_list:
   - asset_type: Dashboard
     name: Amazon S3
     slug: amazon-s3
-    file: amazon-s3-dashboard.yaml
+    file: dashboards/amazon-s3-dashboard.yaml
     config_required: 'no'
     author: Chronosphere
     source: CS
