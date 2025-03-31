@@ -13,15 +13,15 @@ data_source_and_docs:
     url: https://github.com/prometheus-community/windows_exporter?tab=readme-ov-file
 asset_list:
   - asset_type: Collection
-    name: Chronosphere
-    slug: chronosphere-collection
-    file: chronosphere-collection.yaml
+    name: Microsoft Windows
+    slug: windows-collection
+    file: windows-collection.yaml
     config_required: 'no'
     description: Please modify if necessary
   - asset_type: Team
-    name: Chronosphere
-    slug: chronosphere-team
-    file: chronosphere-team.yaml
+    name: Microsoft Windows
+    slug: windows-team
+    file: windows-team.yaml
     config_required: 'no'
     description: Please modify if necessary
   - asset_type: Dashboard
