@@ -1,0 +1,35 @@
+tech_type: windows
+tags:   
+  - windows
+  - windows-exporter
+  - otel-collector
+  - prometheus
+  - windows-hosts
+  - microsoft
+icon: bi-wrench
+data_source_and_docs:
+  - title: Use Windows-exporter and Otel collector to send windows related metrics
+      to Chronosphere
+    url: https://github.com/prometheus-community/windows_exporter?tab=readme-ov-file
+asset_list:
+  - asset_type: Collection
+    name: Microsoft Windows
+    slug: windows-collection
+    file: windows-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: Microsoft Windows
+    slug: windows-team
+    file: windows-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: Windows Exporter
+    slug: windows-exporter
+    file: dashboards/windows-exporter-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Displays stats and trends based on some default metrics from the
+      prometheus windows exporter.
