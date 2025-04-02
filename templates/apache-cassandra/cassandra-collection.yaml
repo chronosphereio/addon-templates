@@ -1,0 +1,6 @@
+api_version: v1/config
+kind: Collection
+spec:
+  slug: cassandra-collection
+  name: cassandra
+  team_slug: cassandra-team
