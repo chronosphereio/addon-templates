@@ -1,0 +1,32 @@
+tech_type: gcp
+tags:
+  - google
+  - gcp
+  - nat
+icon: bi-google
+data_source_and_docs:
+  - title: Google Cloud Monitoring with PromQL
+    url: https://cloud.google.com/monitoring/promql
+asset_list:
+  - asset_type: Collection
+    name: gcp
+    slug: gcp-collection
+    file: gcp-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: gcp
+    slug: gcp-team
+    file: gcp-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: GCP Cloud NAT Gateway
+    slug: gcp-cloud-nat-gateway
+    file: dashboards/gcp-cloud-nat-gateway-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Google cloud nat provides network address translation (nat) for outbound
+      traffic to the internet, virtual private cloud (vpc) networks, on-premises networks,
+      and other cloud provider networks.

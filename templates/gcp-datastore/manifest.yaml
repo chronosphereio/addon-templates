@@ -1,0 +1,31 @@
+tech_type: gcp
+tags:
+  - google
+  - gcp
+  - datastore
+icon: bi-google
+data_source_and_docs:
+  - title: Google Cloud Monitoring with PromQL
+    url: https://cloud.google.com/monitoring/promql
+asset_list:
+  - asset_type: Collection
+    name: gcp
+    slug: gcp-collection
+    file: gcp-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: gcp
+    slug: gcp-team
+    file: gcp-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: GCP Datastore
+    slug: gcp-datastore
+    file: dashboards/gcp-datastore-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Google datastore is a nosql document database built for automatic
+      scaling, high performance, and ease of application development.
