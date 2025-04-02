@@ -3,6 +3,7 @@ tags:
   - cAdvisor
   - kubernetes
   - hardware
+  - google
 icon: bi-google
 data_source_and_docs:
   - title: cAdvisor Documentation
@@ -12,19 +13,19 @@ asset_list:
     name: kubernetes
     slug: kubernetes-collection
     file: k8s-collection.yaml
-    config_required: 'no'
+    config_required: "no"
     description: Please modify if necessary
   - asset_type: Team
     name: kubernetes
     slug: kubernetes-team
     file: k8s-team.yaml
-    config_required: 'no'
+    config_required: "no"
     description: Please modify if necessary
   - asset_type: Dashboard
     name: cAdvisor
     slug: cadvisor
     file: dashboards/cadvisor-dashboard.yaml
-    config_required: 'no'
+    config_required: "no"
     author: Chronosphere
     source: CS
     description: Cadvisor exposes container and hardware statistics as prometheus
@@ -39,3 +40,27 @@ asset_list:
     author: Chronosphere
     source: CS
     description: Kube-state-metrics (KSM) is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects. It is not focused on the health of the individual Kubernetes components, but rather on the health of the various objects inside, such as deployments, nodes and pods.
+  - asset_type: Dashboard
+    name: K8s Jobs and CronJobs Overview
+    slug: kubernetes-collection
+    file: dashboards/k8s-jobs-and-cronjobs-overview-dashboard.yaml
+    config_required: "no"
+    author: Chronosphere
+    source: CS
+    description: Kube-state-metrics (ksm) is a simple service that listens to the
+      kubernetes api server and generates metrics about the state of the objects.
+      it is not focused on the health of the individual kubernetes components, but
+      rather on the health of the various objects inside, such as deployments, nodes
+      and pods.
+  - asset_type: Dashboard
+    name: K8s Daemonsets Overview
+    slug: k8s-daemonsets-overview
+    file: dashboards/k8s-daemonsets-overview-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Kube-state-metrics (ksm) is a simple service that listens to the
+      kubernetes api server and generates metrics about the state of the objects.
+      it is not focused on the health of the individual kubernetes components, but
+      rather on the health of the various objects inside, such as deployments, nodes
+      and pods.
