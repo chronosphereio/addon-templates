@@ -1,0 +1,53 @@
+tech_type: chronosphere-licensing
+tags:
+  - chronosphere
+  - license limit
+  - metric
+  - cardinality
+  - dpps
+icon: bi-gear
+data_source_and_docs:
+  - title: cAdvisor Documentation
+    url: https://github.com/google/cadvisor/blob/master/docs/storage/prometheus.md
+asset_list:
+  - asset_type: Collection
+    name: chronosphere-platform
+    slug: chronosphere-platform-collection
+    file: chrono-platform-collection.yaml
+    config_required: "no"
+    description: Please modify if necessary
+  - asset_type: Team
+    name: chronosphere-platform
+    slug: chronosphere-platform-team
+    file: chrono-platform-team.yaml
+    config_required: "no"
+    description: Please modify if necessary
+  - asset-type: Monitor
+    name: Chronosphere Licensing
+    slug: chronosphere-licensing
+    file: monitors/chronosphere-licensing-monitor.yaml
+    config_required: "yes"
+    description: Monitor to alert on license limit and cardinality
+  - asset_type: Dashboard
+    name: cAdvisor
+    slug: cadvisor
+    file: dashboards/cadvisor-dashboard.yaml
+    config_required: "no"
+    author: Chronosphere
+    source: CS
+    description: Cadvisor exposes container and hardware statistics as prometheus
+      metrics out of the box. by default, these metrics are served under the /metrics
+      http endpoint. this endpoint may be customized by setting the -prometheus_endpoint
+      and -disable_metrics or -enable_metrics command-line flags.
+  - asset_type: Dashboard
+    name: K8s Daemonsets Overview
+    slug: k8s-daemonsets-overview
+    file: dashboards/k8s-daemonsets-overview-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Kube-state-metrics (ksm) is a simple service that listens to the
+      kubernetes api server and generates metrics about the state of the objects.
+      it is not focused on the health of the individual kubernetes components, but
+      rather on the health of the various objects inside, such as deployments, nodes
+      and pods.

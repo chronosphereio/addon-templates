@@ -1,0 +1,20 @@
+api_version: v1/config
+kind: Monitor
+spec:
+  slug: persisted-cardinality-is-being-penal
+  name: Persisted Cardinality Is Being Penalized
+  collection_slug: chronosphere-platform-collection
+  labels:
+    env: prod
+    team: infra
+  signal_grouping: {}
+  series_conditions:
+    defaults:
+      warn:
+        conditions:
+          - op: GT
+            sustain_secs: 300
+            resolve_sustain_secs: 60
+  notification_policy_slug: infra-notification-policy
+  interval_secs: 60
+  prometheus_query: sum(chrono_metrics_persisted_license_dpps_dropped{limit="persisted_cardinality",datapoint_type="standard"})

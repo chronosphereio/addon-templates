@@ -1,0 +1,30 @@
+api_version: v1/config
+kind: Monitor
+spec:
+  slug: cardinality-license-exceeded
+  name: Persisted Cardinality License Exceeded
+  collection_slug: chronosphere-platform-collection
+  labels:
+    env: prod
+    team: infra
+  annotations:
+    message_critical: The cardinality license has been exceeded.
+    message_warning: The cardinality license is almost exceeded.
+  signal_grouping: {}
+  series_conditions:
+    defaults:
+      warn:
+        conditions:
+          - op: GEQ
+            value: 0.9
+            sustain_secs: 300
+            resolve_sustain_secs: 60
+      critical:
+        conditions:
+          - op: GT
+            value: 0.95
+            sustain_secs: 300
+            resolve_sustain_secs: 60
+  notification_policy_slug: infra-notification-policy
+  interval_secs: 60
+  prometheus_query: "(\n\tsum(chrono_metrics_persisted_cardinality_license_consumed{datapoint_type=\"standard\"})\n)\n/\n(\n\tsum(chrono_metrics_persisted_cardinality_license_capacity{datapoint_type=\"standard\"})\n\tor\n\tsum(chrono_metrics_persisted_cardinality_license_limit{datapoint_type=\"standard\"})\n\tor\n\tlimit_service_capacity_cardinality_limit\n\tor\n\tlimit_service_license_cardinality_limit\n)"

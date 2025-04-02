@@ -1,0 +1,30 @@
+api_version: v1/config
+kind: Monitor
+spec:
+  slug: histogram-matched-writes-license-exceeded
+  name: Histogram Matched Writes License Exceeded
+  collection_slug: chronosphere-platform-collection
+  labels:
+    env: prod
+    team: infra
+  annotations:
+    message_critical: The histogram matched writes license has been exceeded.
+    message_warning: The histogram matched writes license is almost exceeded.
+  signal_grouping: {}
+  series_conditions:
+    defaults:
+      warn:
+        conditions:
+          - op: GT
+            value: 0.9
+            sustain_secs: 300
+            resolve_sustain_secs: 60
+      critical:
+        conditions:
+          - op: GEQ
+            value: 0.95
+            sustain_secs: 300
+            resolve_sustain_secs: 60
+  notification_policy_slug: infra-notification-policy
+  interval_secs: 60
+  prometheus_query: "(\n\t(sum(chrono_metrics_matched_writes_license_dpps_consumed{datapoint_type=\"histogram\"}))\n\t/\n\t(\n\t\tsum(chrono_metrics_matched_writes_license_dpps_capacity{datapoint_type=\"histogram\"})\n\t\tor\n\t\tsum(chrono_metrics_matched_writes_license_dpps_limit{datapoint_type=\"histogram\"})\n\t)\n)\nor\n(\n\t(max(limit_service_matched_count) or vector (0))\n\t/\n\t(limit_service_capacity_matched_limit or limit_service_licensed_matched_limit)\n)"
