@@ -1,0 +1,31 @@
+tech_type: otel
+tags:
+  - otel
+  - collectors
+icon: bi-wrench
+data_source_and_docs:
+  - title: OTEL Documentation
+    url: https://opentelemetry.io/docs/
+asset_list:
+  - asset_type: Collection
+    name: otel
+    slug: otel-collection
+    file: otel-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: otel
+    slug: otel-team
+    file: otel-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: OTEL APM
+    slug: otel-apm
+    file: dashboards/otel-apm-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Opentelemetry, also known as otel, is a vendor-neutral open source
+      observability framework for instrumenting, generating, collecting, and exporting
+      telemetry data such as traces, metrics, and logs.
