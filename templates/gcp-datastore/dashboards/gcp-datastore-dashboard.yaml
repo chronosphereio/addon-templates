@@ -1,0 +1,23 @@
+api_version: v1/config
+kind: Dashboard
+spec:
+  slug: gcp-datastore
+  name: GCP Datastore
+  collection_slug: gcp-collection
+  dashboard_json: '{"kind":"Dashboard","spec":{"duration":"30m","events":[],"layouts":[{"kind":"Grid","spec":{"items":[{"content":{"$ref":"#/spec/panels/apiRequestCount-2"},"height":9,"width":24,"x":0,"y":0},{"content":{"$ref":"#/spec/panels/readSizes-4"},"height":8,"width":12,"x":0,"y":9},{"content":{"$ref":"#/spec/panels/writeSizes-6"},"height":8,"width":12,"x":12,"y":9},{"content":{"$ref":"#/spec/panels/indexWriteCount-8"},"height":8,"width":12,"x":0,"y":17}]}}],"panels":{"apiRequestCount-2":{"kind":"Panel","spec":{"display":{"description":"Count
+    of Datastore API calls. Sampled every 60 seconds. \n\napi_method: The API method
+    called (for example: BeginTransaction or Commit).\nresponse_code: Operation response
+    code string, derived as a string representation of a HTTP status code (e.g. success,
+    not_found, unavailable).","name":"API Request Count"},"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"Table","position":"Right","values":["Max","Mean","Last"]},"tooltip":{"mode":"nearby"},"visual":{"area_opacity":0.05,"line_width":1.5,"point_radius":3},"y_axis":{"unit":{"abbreviate":true,"kind":"Decimal"}}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"#
+    sum(rate(stackdriver_datastore_request_datastore_googleapis_com_api_request_count{project_id=~\"$project\"}[$step]))
+    by (response_code, api_method)\nvector(0)","series_name_format":"{{api_method}}
+    - {{response_code}}"}}}}]}},"indexWriteCount-8":{"kind":"Panel","spec":{"display":{"description":"Count
+    of Datastore index writes. Sampled every 60 seconds.","name":"Index write count"},"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"List","position":"Bottom","values":[]},"tooltip":{"mode":"nearby"},"visual":{"area_opacity":0.05,"line_width":1.5,"point_radius":3},"y_axis":{"unit":{"abbreviate":true,"kind":"Decimal"}}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"rate(stackdriver_datastore_request_datastore_googleapis_com_index_write_count{project_id=~\"$project\"}[$step])","series_name_format":"{{instance}}"}}}}]}},"readSizes-4":{"kind":"Panel","spec":{"display":{"description":"Distribution
+    of sizes of read entities, grouped by type. Sampled every 60 seconds. ","name":"Read
+    Sizes"},"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"List","position":"Bottom","values":[]},"tooltip":{"mode":"nearby"},"visual":{"area_opacity":0.05,"line_width":1.5,"point_radius":3},"y_axis":{"unit":{"abbreviate":true,"kind":"Decimal"}}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"#
+    sum(rate(stackdriver_datastore_request_datastore_googleapis_com_entity_read_sizes_sum{project_id=~\"$project\"}[$step]))
+    by (job, type)\nvector(0)","series_name_format":"type: {{type}}"}}}}]}},"writeSizes-6":{"kind":"Panel","spec":{"display":{"description":"Distribution
+    of sizes of written entities, grouped by op. Sampled every 60 seconds. ","name":"Write
+    sizes"},"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"List","position":"Bottom","values":[]},"tooltip":{"mode":"nearby"},"visual":{"area_opacity":0.05,"line_width":1.5,"point_radius":3},"y_axis":{"unit":{"abbreviate":true,"kind":"Decimal"}}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"sum(rate(stackdriver_datastore_request_datastore_googleapis_com_entity_write_sizes_sum{project_id=~\"$project\"}[$step]))
+    by (job, op)","series_name_format":"op: {{op}}"}}}}]}}},"variables":[{"kind":"TextVariable","spec":{"name":"datasource","value":"Chronosphere
+    Prometheus"}},{"kind":"ListVariable","spec":{"allow_all_value":false,"allow_multiple":false,"default_value":"","name":"project","plugin":{"kind":"PrometheusLabelValuesVariable","spec":{"label_name":"project_id","matchers":["stackdriver_datastore_request_datastore_googleapis_com_api_request_count"]}}}},{"kind":"ListVariable","spec":{"allow_multiple":false,"default_value":"5m","name":"step","plugin":{"kind":"StaticListVariable","spec":{"values":["5m","10m","30m","1h","6h","12h","1d","7d"]}}}}]},"spec_version":"1"}'
