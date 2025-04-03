@@ -3,7 +3,7 @@ kind: NotificationPolicy
 spec:
   slug: chronosphere-platform-notification-policy
   name: Chronosphere Platform Notification Policy
-  team_slug: cchronosphere-platform-team
+  team_slug: chronosphere-platform-team
   routes:
     defaults:
       warn: {}
