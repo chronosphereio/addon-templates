@@ -1,0 +1,32 @@
+tech_type: rabbitmq
+tags:
+  - rabbitmq
+  - messaging
+icon: bi-wrench
+data_source_and_docs:
+  - title: RabbitMQ Prometheus Documentation
+    url: https://www.rabbitmq.com/docs/prometheus
+asset_list:
+  - asset_type: Collection
+    name: rabbitmq
+    slug: rabbitmq-collection
+    file: rabbitmq-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: rabbitmq
+    slug: rabbitmq-team
+    file: rabbitmq-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: RabbitMQ Overview
+    slug: rabbitmq-overview
+    file: dashboards/rabbitmq-overview-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Rabbitmq, an open-source message broker, can be deployed and managed
+      on red hat openshift container platform (ocp) using the rabbitmq cluster kubernetes
+      operator and the rabbitmq messaging topology operator for automated provisioning
+      and management of rabbitmq clusters.

@@ -1,0 +1,33 @@
+tech_type: gcp
+tags:
+  - google
+  - gcp
+  - quotas
+icon: bi-google
+data_source_and_docs:
+  - title: Google Cloud Quotas with PromQL
+    url: https://cloud.google.com/monitoring/quotas
+asset_list:
+  - asset_type: Collection
+    name: gcp
+    slug: gcp-collection
+    file: gcp-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: gcp
+    slug: gcp-team
+    file: gcp-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: GCP Quota
+    slug: gcp-quota
+    file: dashboards/gcp-quota-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: 'Google cloud uses quotas to help ensure fairness and reduce spikes
+      in resource use and availability. a quota restricts how much of a google cloud
+      resource your google cloud project can use. quotas apply to a range of resource
+      types, including hardware, software, and network components. '
