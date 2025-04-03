@@ -15,6 +15,6 @@ spec:
           - op: GT
             sustain_secs: 300
             resolve_sustain_secs: 60
-  notification_policy_slug: infra-notification-policy
+  notification_policy_slug: chronosphere-platform-notification-policy
   interval_secs: 60
   prometheus_query: sum(chrono_metrics_persisted_license_dpps_dropped{limit="persisted_writes",datapoint_type="standard"})

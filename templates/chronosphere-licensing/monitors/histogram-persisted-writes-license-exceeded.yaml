@@ -25,6 +25,6 @@ spec:
             value: 0.95
             sustain_secs: 300
             resolve_sustain_secs: 60
-  notification_policy_slug: infra-notification-policy
+  notification_policy_slug: chronosphere-platform-notification-policy
   interval_secs: 60
   prometheus_query: "(\n\tsum(chrono_metrics_persisted_writes_license_dpps_consumed{datapoint_type=\"histogram\"})\n\t/\n\t(\n\t\tsum(chrono_metrics_persisted_writes_license_dpps_capacity{datapoint_type=\"histogram\"})\n\t\tor\n\t\tsum(chrono_metrics_persisted_writes_license_dpps_limit{datapoint_type=\"histogram\"})\n\t)\n)\nor\n(limit_service_persisted_count / (limit_service_capacity_persist_limit or limit_service_licensed_persist_limit))"
