@@ -75,3 +75,15 @@ asset_list:
       metrics from linux and unix-like systems, exposing them in a format that prometheus
       can scrape for monitoring purposes, including cpu usage, memory, disk i/o, and
       more.
+  - asset_type: Dashboard
+    name: Kubernetes / Views / Global
+    slug: kubernetes--views--global
+    file: dashboards/kubernetes--views--global-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Kube-state-metrics (ksm) is a simple service that listens to the
+      kubernetes api server and generates metrics about the state of the objects.
+      it is not focused on the health of the individual kubernetes components, but
+      rather on the health of the various objects inside, such as deployments, nodes
+      and pods.
