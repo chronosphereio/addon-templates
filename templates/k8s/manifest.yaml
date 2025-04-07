@@ -64,3 +64,15 @@ asset_list:
       it is not focused on the health of the individual kubernetes components, but
       rather on the health of the various objects inside, such as deployments, nodes
       and pods.
+  - asset_type: Dashboard
+    name: Kube State Metrics
+    slug: kube-state-metrics
+    file: dashboards/kube-state-metrics-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Kube-state-metrics (ksm) is a simple service that listens to the
+      kubernetes api server and generates metrics about the state of the objects.
+      it is not focused on the health of the individual kubernetes components, but
+      rather on the health of the various objects inside, such as deployments, nodes
+      and pods.
