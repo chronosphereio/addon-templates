@@ -5,6 +5,7 @@ tags:
   - kubernetes
   - hardware
   - google
+  - k8s
 icon: bi-google
 data_source_and_docs:
   - title: cAdvisor Documentation
@@ -77,7 +78,7 @@ asset_list:
       it is not focused on the health of the individual kubernetes components, but
       rather on the health of the various objects inside, such as deployments, nodes
       and pods.
- - asset_type: Dashboard
+  - asset_type: Dashboard
     name: Node Exporter
     slug: node-exporter
     file: dashboards/node-exporter-dashboard.yaml

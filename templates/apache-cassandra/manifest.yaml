@@ -1,4 +1,4 @@
-tech_type: cassandra
+tech_type: apache-cassandra
 description: Apache cassandra is an open source nosql distributed database trusted
       by thousands of companies for scalability and high availability without compromising
       performance. linear scalability and proven fault-tolerance on commodity hardware
