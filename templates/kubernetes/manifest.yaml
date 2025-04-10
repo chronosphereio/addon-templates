@@ -113,3 +113,13 @@ asset_list:
       it is not focused on the health of the individual kubernetes components, but
       rather on the health of the various objects inside, such as deployments, nodes
       and pods.
+  - asset_type: Dashboard
+    name: Kubernetes StatefulSets Overview
+    slug: kubernetes-statefulsets-overview
+    file: dashboards/kubernetes-statefulsets-overview-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: A statefulset runs a group of pods, and maintains a sticky identity
+      for each of those pods. this is useful for managing applications that need persistent
+      storage or a stable, unique network identity.
