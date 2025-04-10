@@ -1,4 +1,4 @@
-tech_type: AWS
+tech_type: aws-s3
 tags:
   - aws
   - s3

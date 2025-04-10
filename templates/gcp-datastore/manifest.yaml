@@ -1,4 +1,4 @@
-tech_type: gcp
+tech_type: gcp-datastore
 tags:
   - google
   - gcp
