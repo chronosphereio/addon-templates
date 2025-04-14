@@ -77,8 +77,7 @@ asset_list:
 | file                 | asset item           | Required            | Defines the file name containing the configuration of the asset.                                                                                                                           | filename       | manifest.yaml                                          |
 | config_required      | asset item           | Required            | Boolean value defining whether or not the asset requires a configuration file.                                                                                                             | boolean string | "yes", "no"                                            |
 | description          | asset item           | Required            | Describes the nature and utility of the asset.                                                                                                                                             | string         |                                                        |
-| screenshot           | asset item           | Optional            | Screenshot of a dasbhoard included in the package.                                                                                                                                         |                |                                                        |
-
+| screenshot           | asset item           | Optional            | Screenshot of a dashboard included in the package.                                                                                                                                         |                |                                                        |
 ## Standards
 
 Each template directory must include a README file with a minimum set of details:
