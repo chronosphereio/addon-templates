@@ -24,8 +24,7 @@ vendor-product/
 
 `<vendor>` is a normalized form of the vendor's name, for example: `Palo Alto Networks` to `panw`, or when there is no specific vendor use a descriptive like `linux` for linux os logs. 
 
-`<product>` is a normalized form of the vendor's product name, for example: `Cortex XDR` to `cortex_xdr`. For an individual service or product provided by a vendor, the recommend structure would be for the top level template directory to reflect the service, for example `aws-s3`. 
-
+`<product>` is a normalized form of the vendor's product name, for example: `Cortex XDR` to `cortex_xdr`. For an individual service or product provided by a vendor, the recommended structure would be for the top level template directory to reflect the service, for example `aws-s3`. 
 `<template_name>` is a simple descriptive name for the collector template.
 
 `<base-platform-required-assets>` are the base organizational structure required to import specific asset types like dashboards, monitors, data shaping rule and others. If a folder contains these asset types, the required asset yamls should be present within the vendor-product directory.
