@@ -11,7 +11,7 @@ This repository is a library of addons for Chronosphere products to enable rapid
 
 
 ## How to navigate
-The general format for this repository is laid out `templates/<vendor>-<product>/reserouce-type/file` with readme files and sample data. Lua script examples are the only expection to rule curently, and can be found at this path: `processors/lua_examples/<lua_name>/template.json`.
+The general format for this repository is laid out `templates/<vendor>-<product>/resource-type/file` with readme files and sample data. Lua script examples are the only exception to rule currently, and can be found at this path: `processors/lua_examples/<lua_name>/template.json`.
 
 ## Contributing
 Contributions are open to anyone, please read the [contribution guide](https://github.com/chronosphereio/processing-templates/blob/main/CONTRIBUTING.md) for standards.
