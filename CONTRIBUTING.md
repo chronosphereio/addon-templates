@@ -59,7 +59,7 @@ asset_list:
     slug: kubernetes-io
     file: k8s-collection.yaml
     config_required: no
-    description: 'A chronosphere collection for storing assets in this library these assets will include dashboards, alerts, and data shaping rules for monitoring Kubernetes clusters.'
+    description: 'A chronosphere collection for storing assets in this library. These assets will include dashboards, alerts, and data shaping rules for monitoring Kubernetes clusters.'
 ```
 
 #### Manifest Key:
