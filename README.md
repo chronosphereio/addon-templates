@@ -3,7 +3,7 @@ This repository is a library of addons for Chronosphere products to enable rapid
 
 - [Dashboards](https://docs.chronosphere.io/observe/dashboards): Pre-built visualizations to monitor key metrics and gain insights into system performance
 - [Alerts](https://docs.chronosphere.io/investigate/alerts): Proactive notifications to identify potential issues and take corrective action
-- [Parsers](https://docs.chronosphere.io/pipeline-data/parsers): Ability to transform telemetry data into predictable, structure format.
+- [Parsers](https://docs.chronosphere.io/pipeline-data/parsers): Ability to transform telemetry data into predictable, structured format.
 - [Processors](https://docs.chronosphere.io/pipeline-data/processing-rules):
 - API Collectors: 
 - [Data Shaping and control Rules](https://docs.chronosphere.io/control/shaping): Streamline your data storage and reduce costs by aggregating metrics at scale
