@@ -7,7 +7,7 @@ This repository is a library of addons for Chronosphere products to enable rapid
 - [Processors](https://docs.chronosphere.io/pipeline-data/processing-rules):
 - API Collectors: 
 - [Data Shaping and control Rules](https://docs.chronosphere.io/control/shaping): Streamline your data storage and reduce costs by aggregating metrics at scale
-- Documentation: Perscriptive, clear and concise guidance on how to best take advantage of each tech type, send the data to Chronosphere and use each package effectively.
+- Documentation: Prescriptive, clear and concise guidance on how to best take advantage of each tech type, send the data to Chronosphere and use each package effectively.
 
 
 ## How to navigate
