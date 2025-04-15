@@ -89,4 +89,28 @@ asset_list:
     file: shaping-rules/derivedLabel.yaml
     name: rule1
     slug: rule1
-    source: CS      
+    source: CS 
+  - asset_type: Processor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/derivedLabel.yaml
+    name: rule1
+    slug: rule1
+    source: CS
+  - asset_type: Collector
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/derivedLabel.yaml
+    name: rule1
+    slug: rule1
+    source: CS
+  - asset_type: Parser
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/derivedLabel.yaml
+    name: rule1
+    slug: rule1
+    source: CS 
