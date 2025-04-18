@@ -113,4 +113,12 @@ asset_list:
     file: shaping-rules/derivedLabel.yaml
     name: rule1
     slug: rule1
+    source: CS
+  - asset_type: new-asset-type
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/derivedLabel.yaml
+    name: mynewasset
+    slug: slug_nameformyasset
     source: CS 
