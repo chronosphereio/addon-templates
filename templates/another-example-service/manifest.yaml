@@ -1,0 +1,124 @@
+tech_type: example-service-max
+tags:   
+  - vendor
+  - tag
+  - example
+  - prometheus
+  - windows-hosts
+  - microsoft
+icon: bi-box
+data_source_and_docs:
+  - title: Use Windows-exporter and Otel collector to send windows related metrics
+      to Chronosphere
+    url: https://github.com/prometheus-community/windows_exporter?tab=readme-ov-file
+asset_list:
+  - asset_type: Collection
+    name: dev test collection
+    slug: test-collection
+    file: test-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: dev test team
+    slug: test-team
+    file: test-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: Test Dashboard
+    slug: test-dashboard
+    file: dashboards/windows-exporter-dashboard.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Displays stats and trends based on some default metrics from the
+      prometheus windows exporter.
+  - asset_type: Dashboard
+    name: Test Dashboard2
+    slug: test-dashboard2
+    file: dashboards/windows-exporter-dashboard2.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Displays stats and trends based on some default metrics from the
+      prometheus windows exporter.
+  - asset_type: Collection
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: chrono-platform-collection.yaml
+    name: Chronosphere Platform
+    slug: chronosphere-platform-collection
+    source: CS
+  - asset_type: Team
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: chrono-platform-team.yaml
+    name: Chronosphere Platform
+    slug: chronosphere-platform-team
+    source: CS
+  - asset_type: NotificationPolicy
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: notification-policies/chrono-platform-notification-policy.yaml
+    name: Chronosphere Platform Notification Policy
+    slug: chronosphere-platform-notification-policy
+    source: CS
+  - asset_type: RecordingRule
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/recordingrule1.yaml
+    name: recordingrule1
+    slug: recordingrule1
+    source: CS 
+  - asset_type: AggregationRule
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/Aggruledev1.yaml
+    name: aggrule1
+    slug: aggrule1
+    source: CS    
+  - asset_type: DerivedLabel
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/derivedLabel.yaml
+    name: rule1
+    slug: rule1
+    source: CS 
+  - asset_type: Processor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/derivedLabel.yaml
+    name: rule1
+    slug: rule1
+    source: CS
+  - asset_type: Collector
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/derivedLabel.yaml
+    name: rule1
+    slug: rule1
+    source: CS
+  - asset_type: Parser
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/derivedLabel.yaml
+    name: rule1
+    slug: rule1
+    source: CS
+  - asset_type: new-asset-type
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: shaping-rules/derivedLabel.yaml
+    name: mynewasset
+    slug: slug_nameformyasset
+    source: CS 
