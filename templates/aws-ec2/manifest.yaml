@@ -1,4 +1,5 @@
 tech_type: aws-ec2
+description: Amazon EC2 (Elastic Compute Cloud) is a web service that provides scalable virtual servers, called instances, allowing users to run applications in the cloud without needing to manage physical hardware. It offers flexible compute capacity, customizable configurations, and integrates with other AWS services for building and deploying applications efficiently.
 tags:
   - Amazon
   - EC2
