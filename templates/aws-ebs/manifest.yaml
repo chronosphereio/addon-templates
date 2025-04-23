@@ -29,7 +29,5 @@ asset_list:
     config_required: "no"
     author: Chronosphere
     source: CS
-    description:
-      Provides visibility for all essential metrics related to amazon ebs.
-      amazon elastic block store (amazon ebs) is an easy-to-use, scalable, high-performance
-      block-storage service designed for amazon elastic compute cloud (amazon ec2).
+    description: Provides visibility for all essential metrics related to amazon ebs.
+
