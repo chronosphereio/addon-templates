@@ -1,0 +1,18 @@
+tech_type: cloudflare
+description: Cloudflare is a cloud-based platform that provides security, performance, and reliability services for websites and applications. It offers features like DDoS protection, web application firewall (WAF), content delivery network (CDN), and DNS services to optimize and secure internet traffic. Cloudflare helps improve load times, prevent cyber threats, and ensure high availability for web assets.
+tags:
+  - cloudflare
+  - cdn
+  - hosting
+  - cloud
+icon: bi-amazon
+data_source_and_docs:
+  - title: Cloudflare Prometheus Documentation
+    url: https://blog.cloudflare.com/how-cloudflare-runs-prometheus-at-scale/
+asset_list:
+  - asset_type: Processor
+    name: Cloudflare
+    slug: cloudflare-processor
+    file: CloudFlare-HTTP-v2.json
+    config_required: 'yes'
+    description: Please modify if necessary
