@@ -5,7 +5,7 @@ tags:
   - azure
   - advertising
   - cloud
-icon: bi-windows
+icon: bi-microsoft
 data_source_and_docs:
   - title: Azure Active Directory Documentation
     url: https://learn.microsoft.com/en-us/entra/identity/
