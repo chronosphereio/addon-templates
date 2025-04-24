@@ -1,0 +1,24 @@
+tech_type: okta
+description: Okta is a cloud-based identity and access management platform that enables secure user authentication and single sign-on (SSO) across applications and devices. It helps organizations manage user identities, enforce security policies, and streamline access to cloud and on-premises resources. With features like multi-factor authentication (MFA) and lifecycle management, Okta supports zero trust security and enhances IT efficiency.
+tags:
+  - Okta
+  - security
+  - IT
+  - authentication
+icon: bi-wrench
+data_source_and_docs:
+  - title: Configure Okta Gateway for Prometheus
+    url: https://help.okta.com/oag/en-us/content/topics/access-gateway/monitoring-metrics-conf-prometheus.htm
+asset_list:
+  - asset_type: Collector
+    name: Okta Collector
+    slug: okta-collector
+    file: okta-api.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Processor
+    name: Okta Processor
+    slug: okta-processor
+    file: Okta-Http-v1.json
+    config_required: 'yes'
+    description: Please modify if necessary
