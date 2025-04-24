@@ -1,0 +1,18 @@
+tech_type: azure-ad
+description: Azure Active Directory (Azure AD) is Microsoft's cloud-based identity and access management service that helps employees sign in and access resources such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. It provides features like single sign-on (SSO), multi-factor authentication (MFA), and conditional access to enhance security and streamline user experience. Azure AD is essential for managing user identities and securing access in hybrid or fully cloud-based environments.
+tags:
+  - Microsoft
+  - azure
+  - advertising
+  - cloud
+icon: bi-microsoft
+data_source_and_docs:
+  - title: Azure Active Directory Documentation
+    url: https://learn.microsoft.com/en-us/entra/identity/
+asset_list:
+  - asset_type: Processor
+    name: Azure AD
+    slug: azure-ad
+    file: MS-Azure-AD-v1.json
+    config_required: 'yes'
+    description: 
