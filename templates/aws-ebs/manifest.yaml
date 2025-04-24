@@ -1,4 +1,5 @@
 tech_type: aws-ebs
+description: Amazon EBS (Elastic Block Store) is a high-performance, persistent block storage service designed for use with Amazon EC2 instances, acting like a virtual hard drive for storing data such as operating systems, databases, and applications. It supports features like dynamic resizing, snapshots for backup, and various volume types to balance performance and cost.
 tags:
   - amazon
   - aws
@@ -13,21 +14,20 @@ asset_list:
     name: aws
     slug: aws-collection
     file: aws-collection.yaml
-    config_required: 'no'
+    config_required: "no"
     description: Please modify if necessary
   - asset_type: Team
     name: aws
     slug: aws-team
     file: aws-team.yaml
-    config_required: 'no'
+    config_required: "no"
     description: Please modify if necessary
   - asset_type: Dashboard
     name: Amazon EBS
     slug: amazon-ebs
     file: dashboards/amazon-ebs-dashboard.yaml
-    config_required: 'no'
+    config_required: "no"
     author: Chronosphere
     source: CS
     description: Provides visibility for all essential metrics related to amazon ebs.
-      amazon elastic block store (amazon ebs) is an easy-to-use, scalable, high-performance
-      block-storage service designed for amazon elastic compute cloud (amazon ec2).
+

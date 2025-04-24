@@ -1,4 +1,5 @@
 tech_type: rabbitmq
+description: RabbitMQ is an open-source message broker that enables applications to communicate asynchronously by sending and receiving messages through queues. It supports multiple messaging protocols and is widely used for decoupling services, improving scalability, and ensuring reliable message delivery.
 tags:
   - rabbitmq
   - messaging

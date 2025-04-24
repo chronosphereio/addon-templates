@@ -1,4 +1,5 @@
 tech_type: aws-s3
+description: Amazon S3 (Simple Storage Service) is a scalable, high-durability object storage service used to store and retrieve any amount of data from anywhere. It's ideal for backup, archival, static website hosting, and storing files like images, videos, and documents.
 tags:
   - aws
   - s3
