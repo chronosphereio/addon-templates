@@ -1,0 +1,17 @@
+tech_type: guardicore
+description: Guardicore, now part of Akamai and rebranded as Akamai Guardicore Segmentation, is a security platform focused on micro-segmentation and zero trust network protection. It helps organizations visualize, control, and segment traffic within data centers and cloud environments to prevent lateral movement of threats. Guardicore enables granular policy enforcement and reduces the attack surface without relying on traditional network boundaries.
+tags:
+  - guardicore
+  - security
+  - networking
+icon: bi-wrench
+data_source_and_docs:
+  - title: Guardicore Documentation
+    url: https://www.akamai.com/products/akamai-guardicore-segmentation?utm_source=google&utm_medium=cpc&utm_campaign=f-mc-62157&utm_id=us_brand_guardicore&utm_content=brand&utm_placement=noram&ef_id=CjwKCAjwwqfABhBcEiwAZJjC3vuJs0Bk5cgP4p2B3jxqkj6IkWOc2S4W7VNrJROrYUfVBgOuGL3p3hoCwjMQAvD_BwE:G:s&s_kwcid=AL!5241!3!684497907812!p!!g!!guardi%20core!20841689226!156970388576&gad_source=1&gbraid=0AAAAADKpC9l_8Jui-wVvYHjex7l3lhbgM&gclid=CjwKCAjwwqfABhBcEiwAZJjC3vuJs0Bk5cgP4p2B3jxqkj6IkWOc2S4W7VNrJROrYUfVBgOuGL3p3hoCwjMQAvD_BwE
+asset_list:
+  - asset_type: Parser
+    name: Guardicore Parser
+    slug: guardicore-parser
+    file: syslog-guardicore-parser.conf
+    config_required: 'yes'
+    description: Please modify if necessary
