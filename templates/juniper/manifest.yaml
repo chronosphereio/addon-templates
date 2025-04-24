@@ -1,0 +1,17 @@
+tech_type: juniper
+description: Juniper Networks is a networking and cybersecurity company that provides high-performance solutions for data centers, enterprise networks, and service providers. Their portfolio includes routers, switches, firewalls, and AI-driven network management tools designed for speed, scalability, and automation. Juniper is known for delivering secure, reliable, and efficient networking infrastructure for complex IT environments.
+tags:
+  - Juniper
+  - networking
+  - IT
+icon: bi-wrench
+data_source_and_docs:
+  - title: Juniper Promql Documentation
+    url: https://www.juniper.net/us/en/the-feed/topics/5g/cn2-prometheus-analytics.html
+asset_list:
+  - asset_type: Parser
+    name: Juniper Parser
+    slug: juniper-parser
+    file: syslog-juniper-cli-parser.conf
+    config_required: 'yes'
+    description: Please modify if necessary
