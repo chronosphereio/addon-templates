@@ -1,4 +1,5 @@
 tech_type: aws-redis
+description: Amazon ElastiCache for Redis is a fully managed, in-memory data store and cache service that supports ultra-fast data access for real-time applications. It’s based on open-source Redis and is commonly used for caching, session management, leaderboards, and analytics.
 tags:
   - Amazon
   - aws
