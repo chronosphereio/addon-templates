@@ -1,0 +1,16 @@
+tech_type: cisco
+description: Cisco Nexus is a series of high-performance switches designed for data centers and enterprise core networks. They offer low latency, high throughput, and support for advanced features like automation, virtualization, and software-defined networking (SDN). Nexus switches are commonly used to build scalable, reliable, and secure network infrastructures for modern workloads.
+tags:
+  - hardware
+  - cisco
+icon: bi-wrench
+data_source_and_docs:
+  - title: Cisco UCC 5G SMF Metrics Reference
+    url: https://www.cisco.com/c/en/us/td/docs/wireless/ucc/smf/2025-01/metrics-ref/b_ucc-5g-smf-metrics-reference-release-2025-01/m_5g-smf-statistics.html
+asset_list:
+  - asset_type: Parser
+    name: Cisco Nexus Parser
+    slug: cisco-nexus
+    file: syslog-cisco-nexus-parser.conf
+    config_required: 'yes'
+    description: Please modify if necessary
