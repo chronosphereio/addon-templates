@@ -1,0 +1,31 @@
+tech_type: panw-firewall
+description: Palo Alto Networks (PANW) firewalls are next-generation firewalls (NGFWs) that provide advanced threat prevention, traffic visibility, and granular control across networks. They use deep packet inspection, application-aware policies, and integrated threat intelligence to detect and block malicious activity. Designed for scalability and automation, PANW firewalls help secure enterprise, cloud, and hybrid environments against modern cyber threats.
+tags:   
+  - panw
+  - firewall
+  - security
+  - networking
+  - security
+icon: bi-wrench
+data_source_and_docs:
+  - title: Panw Firewall Prometheus Documentation
+    url: https://docs.prismacloud.io/en/compute-edition/22-12/admin-guide/audit/prometheus
+asset_list:
+  - asset_type: Parser
+    name: PANW Firewall Parser
+    slug: panw-firewall-parser
+    file: syslog-palo-parser.conf
+    config_required: 'yes'
+    description: Please modify if necessary
+  - asset_type: Processor
+    name: PANW Firewall Threat Processor
+    slug: panw-firewall-threat-processor
+    file: PAN-NGFW-Threat-v1.json
+    config_required: 'yes'
+    description: Please modify if necessary
+  - asset_type: Processor
+    name: PANW Firewall Traffic Processor
+    slug: panw-firewall-traffic-processor
+    file: PAN-NGFW-Traffic-v1.json
+    config_required: 'yes'
+    description: Please modify if necessary
