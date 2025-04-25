@@ -5,9 +5,6 @@ tags:
   - networking
   - IT
 icon: bi-wrench
-data_source_and_docs:
-  - title: Juniper Promql Documentation
-    url: https://www.juniper.net/us/en/the-feed/topics/5g/cn2-prometheus-analytics.html
 asset_list:
   - asset_type: Parser
     name: Juniper Parser
