@@ -8,8 +8,8 @@ tags:
   - security
 icon: bi-wrench
 data_source_and_docs:
-  - title: Panw Firewall Prometheus Documentation
-    url: https://docs.prismacloud.io/en/compute-edition/22-12/admin-guide/audit/prometheus
+  - title: Panw Firewall Admin Guide
+    url: https://docs.prismacloud.io/en/compute-edition/22-12/admin-guide/firewalls/firewalls
 asset_list:
   - asset_type: Parser
     name: PANW Firewall Parser
