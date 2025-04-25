@@ -29,3 +29,11 @@ asset_list:
     description: Opentelemetry, also known as otel, is a vendor-neutral open source
       observability framework for instrumenting, generating, collecting, and exporting
       telemetry data such as traces, metrics, and logs.
+  - asset_type: Processor
+    name: Otel Pod Logs Processor
+    slug: otel-pod-logs-processor
+    file: OTEL-161-podlogs-v1.json
+    config_required: 'yes'
+    author: Chronosphere
+    source: CS
+    description:
