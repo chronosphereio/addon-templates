@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "aot-readme-generator"
+version = "0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pyyaml = "^6.0.2"
+mdutils = "^1.6.0"
+streamlit = "^1.44.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
