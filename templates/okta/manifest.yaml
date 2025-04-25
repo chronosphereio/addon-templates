@@ -7,8 +7,8 @@ tags:
   - authentication
 icon: bi-wrench
 data_source_and_docs:
-  - title: Configure Okta Gateway for Prometheus
-    url: https://help.okta.com/oag/en-us/content/topics/access-gateway/monitoring-metrics-conf-prometheus.htm
+  - title: Okta Documentation
+    url: https://help.okta.com/en-us/content/index.htm?cshid=csh-index
 asset_list:
   - asset_type: Collector
     name: Okta Collector
