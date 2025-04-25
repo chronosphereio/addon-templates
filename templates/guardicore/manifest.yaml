@@ -1,0 +1,19 @@
+tech_type: guardicore
+description: Guardicore, now part of Akamai and rebranded as Akamai Guardicore Segmentation, is a security platform focused on micro-segmentation and zero trust network protection. It helps organizations visualize, control, and segment traffic within data centers and cloud environments to prevent lateral movement of threats. Guardicore enables granular policy enforcement and reduces the attack surface without relying on traditional network boundaries.
+tags:
+  - guardicore
+  - security
+  - networking
+icon: bi-wrench
+data_source_and_docs:
+  - title: Guardicore Product Page
+    url: https://www.akamai.com/products/akamai-guardicore-segmentation
+  - title: Gaurdicore Segmentation Docs (requires authentication)
+    url: https://techdocs.akamai.com/segmentation-home/docs
+asset_list:
+  - asset_type: Parser
+    name: Guardicore Parser
+    slug: guardicore-parser
+    file: syslog-guardicore-parser.conf
+    config_required: 'yes'
+    description: Please modify if necessary

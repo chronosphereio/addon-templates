@@ -1,0 +1,15 @@
+tech_type: sentinel-one
+description: SentinelOne is an AI-powered endpoint security platform that provides prevention, detection, response, and threat hunting in a single autonomous agent. It uses behavioral AI to identify and stop malicious activity in real time across endpoints, cloud workloads, and IoT devices. SentinelOne is known for its speed, automation, and ability to respond to threats without manual intervention.
+tags:
+  - sentinel
+  - security
+  - IT
+  - automation
+icon: bi-wrench
+asset_list:
+  - asset_type: Collector
+    name: Sentinel One Collector
+    slug: sentinel-one-collector
+    file: sentinel-one-api.yaml
+    config_required: 'yes'
+    description: Please modify if necessary

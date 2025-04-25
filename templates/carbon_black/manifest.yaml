@@ -1,0 +1,16 @@
+tech_type: carbon-black
+description: Carbon Black is a cloud-native endpoint security platform that provides advanced threat detection, prevention, and response capabilities. It continuously monitors endpoint activity to detect malicious behavior using behavioral analytics and threat intelligence. Designed for modern security operations, it helps organizations prevent cyberattacks and respond quickly to incidents.
+tags:
+  - carbon black
+  - security
+icon: bi-wrench
+data_source_and_docs:
+  - title: Carbon Black Documentation
+    url: https://techdocs.broadcom.com/us/en/carbon-black.html
+asset_list:
+  - asset_type: Collector
+    name: Carbon Black Collector
+    slug: carbon-black-collection
+    file: alert-search-api.yaml
+    config_required: 'yes'
+    description: Please modify if necessary

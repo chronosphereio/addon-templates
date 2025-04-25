@@ -17,7 +17,7 @@ vendor-product/
         <template_name>.json
         <asset_name>.yaml
           ...
-  images/
+  resources/
         icon.svg
         dashboard-screenshot1.png
 ```

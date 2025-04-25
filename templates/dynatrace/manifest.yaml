@@ -1,0 +1,18 @@
+tech_type: dynatrace
+description: Dynatrace is an all-in-one observability platform that provides real-time insights into application performance, infrastructure health, and user experience. Using AI-driven analytics and automation, it helps organizations detect, diagnose, and resolve issues across complex cloud environments. Dynatrace supports full-stack monitoring, making it ideal for ensuring reliability and optimizing digital services.
+tags:
+  - Dynatrace
+  - hardware
+  - infrastructure
+  - monitoring
+icon: bi-wrench
+data_source_and_docs:
+  - title: Dynatrace Documentation
+    url: https://docs.dynatrace.com/docs
+asset_list:
+  - asset_type: Collector
+    name: Dynatrace
+    slug: dynatrace-collector
+    file: dynatrace-api.yaml
+    config_required: 'yes'
+    description: Please modify if necessary
