@@ -11,6 +11,6 @@ asset_list:
   - asset_type: Parser
     name: Cisco Nexus Parser
     slug: cisco-nexus
-    file: syslog-cisco-nexus-parser.conf
+    file: parsers/syslog-cisco-nexus-parser.conf
     config_required: 'yes'
     description: Please modify if necessary

@@ -13,12 +13,12 @@ asset_list:
   - asset_type: Collector
     name: Okta Collector
     slug: okta-collector
-    file: okta-api.yaml
+    file: collectors/okta-api.yaml
     config_required: 'no'
     description: Please modify if necessary
   - asset_type: Processor
     name: Okta Processor
     slug: okta-processor
-    file: Okta-Http-v1.json
+    file: processors/Okta-Http-v1.json
     config_required: 'yes'
     description: Please modify if necessary

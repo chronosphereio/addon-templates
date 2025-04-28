@@ -13,6 +13,6 @@ asset_list:
   - asset_type: Processor
     name: Cloudflare
     slug: cloudflare-processor
-    file: CloudFlare-HTTP-v2.json
+    file: processors/CloudFlare-HTTP-v2.json
     config_required: 'yes'
     description: Please modify if necessary
