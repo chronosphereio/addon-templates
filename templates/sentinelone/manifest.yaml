@@ -10,6 +10,6 @@ asset_list:
   - asset_type: Collector
     name: Sentinel One Collector
     slug: sentinel-one-collector
-    file: sentinel-one-api.yaml
+    file: collectors/sentinel-one-api.yaml
     config_required: 'yes'
     description: Please modify if necessary

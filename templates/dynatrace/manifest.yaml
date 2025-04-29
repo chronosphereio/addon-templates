@@ -13,6 +13,6 @@ asset_list:
   - asset_type: Collector
     name: Dynatrace
     slug: dynatrace-collector
-    file: dynatrace-api.yaml
+    file: collectors/dynatrace-api.yaml
     config_required: 'yes'
     description: Please modify if necessary

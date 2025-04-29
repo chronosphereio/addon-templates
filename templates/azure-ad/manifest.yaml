@@ -13,6 +13,6 @@ asset_list:
   - asset_type: Processor
     name: Azure AD
     slug: azure-ad
-    file: MS-Azure-AD-v1.json
+    file: processors/MS-Azure-AD-v1.json
     config_required: 'yes'
     description: 

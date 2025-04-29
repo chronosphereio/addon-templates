@@ -13,6 +13,6 @@ asset_list:
   - asset_type: Processor
     name: Azure Firewall
     slug: azure-firewall
-    file: MS-Azure-FW-v1.json
+    file: processors/MS-Azure-FW-v1.json
     config_required: 'yes'
     description: 
