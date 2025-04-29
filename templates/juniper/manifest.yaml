@@ -9,6 +9,6 @@ asset_list:
   - asset_type: Parser
     name: Juniper Parser
     slug: juniper-parser
-    file: syslog-juniper-cli-parser.conf
+    file: parsers/syslog-juniper-cli-parser.conf
     config_required: 'yes'
     description: Please modify if necessary

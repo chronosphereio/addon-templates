@@ -11,6 +11,6 @@ asset_list:
   - asset_type: Collector
     name: Carbon Black Collector
     slug: carbon-black-collection
-    file: alert-search-api.yaml
+    file: collectors/alert-search-api.yaml
     config_required: 'yes'
     description: Please modify if necessary

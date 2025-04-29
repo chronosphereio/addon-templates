@@ -12,6 +12,6 @@ asset_list:
   - asset_type: Processor
     name: Microsoft Active Directory
     slug: microsoft-ad-processor
-    file: MS-AD-fluentbit-v1.json
+    file: processors/MS-AD-fluentbit-v1.json
     config_required: 'yes'
     description: Please modify if necessary

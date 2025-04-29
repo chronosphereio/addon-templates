@@ -33,3 +33,19 @@ asset_list:
     source: CS
     description: Displays stats and trends based on some default metrics from the
       prometheus windows exporter.
+  - asset_type: Processor
+    name: Windows Eventlogs Processor
+    slug: windows-eventlogs-processor
+    file: processors/MS-Windows-Eventlog-v3.json
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description:
+  - asset_type: Processor
+    name: Windows XML Processor
+    slug: windows-xml-processor
+    file: processors/MS-Windows-XML-v1.json
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description:

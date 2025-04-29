@@ -26,7 +26,7 @@ asset_list:
   - asset_type: Dashboard
     name: Amazon Lambda
     slug: amazon-lambda
-    file: amazon-lambda-dashboard.yaml
+    file: dashboards/amazon-lambda-dashboard.yaml
     config_required: 'no'
     author: Chronosphere
     source: CS

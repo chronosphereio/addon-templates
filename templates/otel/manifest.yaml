@@ -32,7 +32,7 @@ asset_list:
   - asset_type: Processor
     name: Otel Pod Logs Processor
     slug: otel-pod-logs-processor
-    file: OTEL-161-podlogs-v1.json
+    file: processors/OTEL-161-podlogs-v1.json
     config_required: 'yes'
     author: Chronosphere
     source: CS
