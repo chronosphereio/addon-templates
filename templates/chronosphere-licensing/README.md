@@ -6,6 +6,10 @@ README
 
 
 ​Chronosphere is a cloud-native observability platform designed to help engineering teams monitor and troubleshoot complex, distributed applications at scale. These assets help monitor the state of your licensing with Chronosphere.
+## Documentation
+
+- [Chronosphere Platform Licensing](https://docs.chronosphere.io/administer/limits-licensing/licensing)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

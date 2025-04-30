@@ -6,6 +6,10 @@ README
 
 
 Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. It helps ensure high availability, load balancing, and resource efficiency across clusters of machines.
+## Documentation
+
+- [cAdvisor Documentation](https://github.com/google/cadvisor/blob/master/docs/storage/prometheus.md)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

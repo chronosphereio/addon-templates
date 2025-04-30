@@ -6,6 +6,10 @@ README
 
 
 Google Cloud NAT (Network Address Translation) Gateway is a managed network service that allows private Google Cloud resources without external IP addresses to access the internet securely. It provides outbound internet connectivity while keeping internal resources hidden from external networks, ideal for controlled and scalable egress traffic.
+## Documentation
+
+- [Google Cloud Monitoring with PromQL](https://cloud.google.com/monitoring/promql)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

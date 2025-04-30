@@ -6,6 +6,10 @@ README
 
 
 Amazon EBS (Elastic Block Store) is a high-performance, persistent block storage service designed for use with Amazon EC2 instances, acting like a virtual hard drive for storing data such as operating systems, databases, and applications. It supports features like dynamic resizing, snapshots for backup, and various volume types to balance performance and cost.
+## Documentation
+
+- [AWS EBS Documentation](https://docs.aws.amazon.com/ebs/latest/userguide/using_cloudwatch_ebs.html)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

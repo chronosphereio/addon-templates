@@ -6,6 +6,10 @@ README
 
 
 Google Cloud Quotas are limits set on the usage of various resources and services to help manage capacity, ensure fairness, and protect against unexpected spikes in usage. They can be regional or global and can often be increased upon request, helping teams control costs and plan infrastructure needs.
+## Documentation
+
+- [Google Cloud Quotas with PromQL](https://cloud.google.com/monitoring/quotas)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

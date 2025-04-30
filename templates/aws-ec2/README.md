@@ -6,6 +6,10 @@ README
 
 
 Amazon EC2 (Elastic Compute Cloud) is a web service that provides scalable virtual servers, called instances, allowing users to run applications in the cloud without needing to manage physical hardware. It offers flexible compute capacity, customizable configurations, and integrates with other AWS services for building and deploying applications efficiently.
+## Documentation
+
+- [Amazon EC2 Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-PrometheusEC2.html)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

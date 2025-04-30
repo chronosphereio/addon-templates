@@ -6,6 +6,10 @@ README
 
 
 Microsoft Active Directory (AD) is an on-premises directory service that manages and authenticates users, computers, and other resources within a Windows domain network. It uses a structured data store and protocols like LDAP and Kerberos to provide centralized identity and access management. AD is essential for enforcing security policies and enabling user and resource management across enterprise environments.
+## Documentation
+
+- [Microsoft Active Directory Documentation](https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/active-directory-overview)
+
 ## Available Assets
 
 |Asset Type|Status|Count|
