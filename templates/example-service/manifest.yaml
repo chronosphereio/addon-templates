@@ -1,0 +1,31 @@
+tech_type: example-service
+description: 'This is an example service simply to show examples of some of the different functionality in this repo. It has a populated Manifest, a dashboard which has no real data, screenshot support and a custom icon. It also has a collection and team asset.'
+tags:
+  - chronosphere
+  - example
+icon: resources/face.svg
+data_source_and_docs:
+  - title: Chronosphere Docs! Always a good read. 
+    url: https://docs.chronosphere.io/
+asset_list:
+  - asset_type: Collection
+    name: example-collection name
+    slug: example-collection
+    file: example-collection.yaml
+    config_required: 'no'
+    description: A collection resource that would be used to group together a set of resources.
+  - asset_type: Team
+    name: example-team name
+    slug: example-team
+    file: example-team.yaml
+    config_required: 'no'
+    description: A resource type required for ownership of assets.
+  - asset_type: Dashboard
+    name: Example Dashboard Asset
+    slug: my-dashboard-example
+    file: dashboards/my-dashboard-example.yaml
+    config_required: 'no'
+    screenshot: my-dashboard-example.png
+    author: Chronosphere
+    source: CS
+    description: 'A nonfunctioning dashboard simply used to populate the list of assets. '
