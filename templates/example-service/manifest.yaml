@@ -3,7 +3,7 @@ description: 'This is an example service simply to show examples of some of the 
 tags:
   - chronosphere
   - example
-icon: resources/face.svg
+icon: resources/face-2.svg
 data_source_and_docs:
   - title: Chronosphere Docs! Always a good read. 
     url: https://docs.chronosphere.io/
@@ -25,7 +25,7 @@ asset_list:
     slug: my-dashboard-example
     file: dashboards/my-dashboard-example.yaml
     config_required: 'no'
-    screenshot: my-dashboard-example.png
+    screenshot: resources/my-dashboard-example.png
     author: Chronosphere
     source: CS
     description: 'A nonfunctioning dashboard simply used to populate the list of assets. '
