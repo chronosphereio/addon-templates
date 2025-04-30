@@ -6,6 +6,10 @@ README
 
 
 Google Cloud Datastore is a fully managed, NoSQL document database designed for automatic scaling, high availability, and ease of application development. It's ideal for storing structured data for web and mobile apps, offering strong consistency and support for ACID transactions.
+## Documentation
+
+- [Google Cloud Monitoring with PromQL](https://cloud.google.com/monitoring/promql)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

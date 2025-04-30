@@ -6,6 +6,10 @@ README
 
 
 Palo Alto Networks (PANW) firewalls are next-generation firewalls (NGFWs) that provide advanced threat prevention, traffic visibility, and granular control across networks. They use deep packet inspection, application-aware policies, and integrated threat intelligence to detect and block malicious activity. Designed for scalability and automation, PANW firewalls help secure enterprise, cloud, and hybrid environments against modern cyber threats.
+## Documentation
+
+- [Panw Firewall Admin Guide](https://docs.prismacloud.io/en/compute-edition/22-12/admin-guide/firewalls/firewalls)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

@@ -25,6 +25,14 @@ def generate_md(manifest_data):
         readme_file.new_header(level=1, title=readme_data["name"])
         readme_file.new_paragraph(readme_data["description"])
 
+        if len(readme_data["docs"]) != 0:
+            readme_file.new_header(level=2, title="Documentation")
+            items = []
+            for doc_title, doc_link in readme_data["docs"].items():
+                link = readme_file.new_inline_link(link=doc_link, text=doc_title)
+                items.append(link)
+
+            readme_file.new_list(items)
         readme_file.new_header(level=2, title="Available Assets")
         table_row_count = math.ceil(len(readme_data["asset_table"]) / 3)
         readme_file.new_table(columns=3, rows=table_row_count, text=readme_data["asset_table"])

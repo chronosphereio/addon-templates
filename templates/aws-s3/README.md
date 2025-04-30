@@ -6,6 +6,10 @@ README
 
 
 Amazon S3 (Simple Storage Service) is a scalable, high-durability object storage service used to store and retrieve any amount of data from anywhere. It's ideal for backup, archival, static website hosting, and storing files like images, videos, and documents.
+## Documentation
+
+- [Amazon S3 Storage](https://docs.aws.amazon.com/AmazonS3/latest/userguide/metrics-dimensions.html)
+
 ## Available Assets
 
 |Asset Type|Status|Count|
