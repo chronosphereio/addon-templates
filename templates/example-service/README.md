@@ -2,13 +2,13 @@
 README
 ======
 
-# Microsoft Windows
+# Example Service
 
 
-
+This is an example service simply to show examples of some of the different functionality in this repo. It has a populated Manifest, a dashboard which has no real data, screenshot support and a custom icon. It also has a collection and team asset.
 ## Documentation
 
-- [Use Windows-exporter and Otel collector to send windows related metrics to Chronosphere](https://github.com/prometheus-community/windows_exporter?tab=readme-ov-file)
+- [Chronosphere Docs! Always a good read.](https://docs.chronosphere.io/)
 
 ## Available Assets
 
@@ -17,7 +17,6 @@ README
 |collection|✅ Available|1|
 |team|✅ Available|1|
 |dashboard|✅ Available|1|
-|processor|✅ Available|2|
 
 ## Requirements
 
@@ -26,12 +25,7 @@ README
 - A Collector to provide data
 - Chronosphere Tenant
 
-## Windows Exporter
+## my-dashboard-example
 
-- System Info
-- Osinfo
-
-## Processors
-
-- Windows Eventlogs Processor
-- Windows XML Processor
+- Panel Example
+- Panel Example
