@@ -1,0 +1,22 @@
+api_version: v1/config
+kind: Monitor
+spec:
+  slug: gcp-redis-memory-usage-ratio-too-high
+  name: GCP Redis Memory Usage Ratio too high
+  collection_slug: gcp-collection
+  signal_grouping:
+    label_names:
+      - project_id
+  series_conditions:
+    defaults:
+      warn:
+        conditions:
+          - op: GT
+            value: 0.8
+            sustain_secs: 600
+          - op: GT
+            value: 0.9
+            sustain_secs: 600
+  notification_policy_slug: gcp-notification-policy
+  interval_secs: 60
+  prometheus_query: avg by (project_id, instance_id) (gcp_redis_instance_redis_googleapis_com_stats_memory_usage_ratio{project_id=~".*",region=~".*",instance_id=~".*",role=~".*"} offset 180s)
