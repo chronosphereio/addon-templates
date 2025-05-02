@@ -1,0 +1,44 @@
+tech_type: gcp-redis
+description: Memorystore for Redis is a fully managed Redis service for Google Cloud. Applications running on Google Cloud can achieve extreme performance by leveraging the highly scalable, available, secure Redis service without the burden of managing complex Redis deployments.
+tags:
+  - google
+  - gcp
+  - redis
+  - memory
+  - database
+icon: bi-google
+data_source_and_docs:
+  - title: Ingest Google Cloud Metrics with chronosphere
+    url: https://docs.chronosphere.io/ingest/metrics-traces/gcp
+  - title: Google Cloud Redis Metrics
+    url: https://cloud.google.com/monitoring/api/metrics_gcp#gcp-redis
+asset_list:
+  - asset_type: Collection
+    name: gcp
+    slug: gcp-collection
+    file: gcp-collection.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Team
+    name: gcp
+    slug: gcp-team
+    file: gcp-team.yaml
+    config_required: 'no'
+    description: Please modify if necessary
+  - asset_type: Dashboard
+    name: GCP Memorystore for Redis 
+    slug: gcp-datastore
+    file: dashboards/gcp-redis.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Dashboard to display metrics related to GCP Memory Story for redis, primarily focused on Redis Instance metrics.
+  - asset_type: Monitor
+    name: GCP Redis Memory Usage Ratio too high 
+    slug: gcp-redis-memory-usage-ratio-too-high
+    file: monitors/memory-util-ratio.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: Dashboard to display metrics related to GCP Memory Story for redis, primarily focused on Redis Instance metrics.
+
