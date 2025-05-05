@@ -6,6 +6,10 @@ README
 
 
 Cloudflare is a cloud-based platform that provides security, performance, and reliability services for websites and applications. It offers features like DDoS protection, web application firewall (WAF), content delivery network (CDN), and DNS services to optimize and secure internet traffic. Cloudflare helps improve load times, prevent cyber threats, and ensure high availability for web assets.
+## Documentation
+
+- [Cloudflare Prometheus Documentation](https://blog.cloudflare.com/how-cloudflare-runs-prometheus-at-scale/)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

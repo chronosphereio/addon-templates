@@ -6,6 +6,10 @@ README
 
 
 RabbitMQ is an open-source message broker that enables applications to communicate asynchronously by sending and receiving messages through queues. It supports multiple messaging protocols and is widely used for decoupling services, improving scalability, and ensuring reliable message delivery.
+## Documentation
+
+- [RabbitMQ Prometheus Documentation](https://www.rabbitmq.com/docs/prometheus)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

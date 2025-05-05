@@ -6,6 +6,10 @@ README
 
 
 Carbon Black is a cloud-native endpoint security platform that provides advanced threat detection, prevention, and response capabilities. It continuously monitors endpoint activity to detect malicious behavior using behavioral analytics and threat intelligence. Designed for modern security operations, it helps organizations prevent cyberattacks and respond quickly to incidents.
+## Documentation
+
+- [Carbon Black Documentation](https://techdocs.broadcom.com/us/en/carbon-black.html)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

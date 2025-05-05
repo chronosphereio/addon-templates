@@ -6,6 +6,10 @@ README
 
 
 
+## Documentation
+
+- [OTEL Documentation](https://opentelemetry.io/docs/)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

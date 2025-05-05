@@ -6,6 +6,10 @@ README
 
 
 Amazon ElastiCache for Redis is a fully managed, in-memory data store and cache service that supports ultra-fast data access for real-time applications. It’s based on open-source Redis and is commonly used for caching, session management, leaderboards, and analytics.
+## Documentation
+
+- [AWS Redis Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights-Prometheus-Setup-redis-ecs.html)
+
 ## Available Assets
 
 |Asset Type|Status|Count|

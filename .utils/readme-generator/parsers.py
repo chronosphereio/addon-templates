@@ -9,10 +9,11 @@ def parse_manifest(manifest_file_path: str):
     name = converters.convert_kebab_to_title(name)
 
     readme_folder_path = manifest_file_path.removesuffix("manifest.yaml")
-
+    
     manifest_data={
         "name":name,
         "description":"",
+        "docs":{},
         "asset_table":["Asset Type", "Status", "Count"],
         "dashboards":[],
         "monitors":[],
@@ -25,10 +26,19 @@ def parse_manifest(manifest_file_path: str):
 
     with open(manifest_file_path, "r") as file:
         manifest: dict = yaml.safe_load(file)
-
+    # print("manifest", manifest)
     asset_list = manifest["asset_list"]
     if "description" in manifest:
         manifest_data["description"] = manifest["description"]
+
+    if "data_source_and_docs" in manifest and len(manifest["data_source_and_docs"]) > 0:
+        for source in manifest["data_source_and_docs"]:
+            title = source["title"]
+            url = source["url"]
+            manifest_docs = manifest_data["docs"]
+            if title not in manifest_docs:
+                manifest_docs[title] = url
+
     for asset in asset_list:
         asset_type = asset["asset_type"].lower()
         asset_name = asset["name"]
