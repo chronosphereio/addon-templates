@@ -6,7 +6,7 @@ tags:
   - metric
   - cardinality
   - dpps
-icon: bi-gear
+icon: resources/CS_flat_logo_H_all black.png
 data_source_and_docs:
   - title: Chronosphere Platform Licensing
     url: https://docs.chronosphere.io/administer/limits-licensing/licensing
