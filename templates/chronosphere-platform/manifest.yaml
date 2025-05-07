@@ -29,7 +29,7 @@ asset_list:
   - asset_type: Dashboard
     author: Chronosphere
     config_required: 'yes'
-    description: 'Overview of alerting. Please set up your environment variables, currently using environment as the source label.'
+    description: 'Overview of all tenant alerting. Please set up your environment variables, currently using environment as the source label.'
     file: dashboards/alerting-dashboard.yaml
     name: Alerting Overview
     slug: alerting-overview
