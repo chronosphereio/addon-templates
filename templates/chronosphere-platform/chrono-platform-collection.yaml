@@ -1,0 +1,6 @@
+api_version: v1/config
+kind: Collection
+spec:
+  slug: chronosphere-platform-collection
+  name: Chronosphere Platform
+  team_slug: chronosphere-platform-team
