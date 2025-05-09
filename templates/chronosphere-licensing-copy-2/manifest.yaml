@@ -1,0 +1,117 @@
+tech_type: chronosphere-licensing
+description: ​Chronosphere is a cloud-native observability platform designed to help engineering teams monitor and troubleshoot complex, distributed applications at scale. These assets help monitor the state of your licensing with Chronosphere.
+tags:
+  - chronosphere
+  - license limit
+  - metric
+  - cardinality
+  - dpps
+icon: bi-gear
+data_source_and_docs:
+  - title: Chronosphere Platform Licensing
+    url: https://docs.chronosphere.io/administer/limits-licensing/licensing
+asset_list:
+  - asset_type: Collection
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: chrono-platform-collection.yaml
+    name: Chronosphere Platform
+    slug: chronosphere-platform-collection
+    source: CS
+  - asset_type: Team
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: chrono-platform-team.yaml
+    name: Chronosphere Platform
+    slug: chronosphere-platform-team
+    source: CS
+  - asset_type: Monitor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: monitors/persisted-writes-is-being-penal.yaml
+    name: Persisted Writes Is Being Penalized
+    slug: persisted-writes-is-being-penal
+    source: CS
+  - asset_type: Monitor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: monitors/histogram-persisted-writes-license-exceeded.yaml
+    name: Histogram Persisted Writes License Exceeded
+    slug: histogram-persisted-writes-license-exceeded
+    source: CS
+  - asset_type: Monitor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: monitors/histogram-matched-writes-license-exceeded.yaml
+    name: Histogram Matched Writes License Exceeded
+    slug: histogram-matched-writes-license-exceeded
+    source: CS
+  - asset_type: Monitor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: monitors/matched-writes-license-exceeded.yaml
+    name: Matched Writes License Exceeded
+    slug: matched-writes-license-exceeded
+    source: CS
+  - asset_type: Monitor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: monitors/persisted-writes-license-exceeded.yaml
+    name: Persisted Writes License Exceeded
+    slug: persisted-writes-license-exceeded
+    source: CS
+  - asset_type: Monitor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: monitors/cardinality-license-exceeded.yaml
+    name: Persisted Cardinality License Exceeded
+    slug: cardinality-license-exceeded
+    source: CS
+  - asset_type: Monitor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: monitors/histogram-cardinality-license-exceeded.yaml
+    name: Histogram Persisted Cardinality License Exceeded
+    slug: histogram-cardinality-license-exceeded
+    source: CS
+  - asset_type: Monitor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: monitors/persisted-cardinality-is-being-penal.yaml
+    name: Persisted Cardinality Is Being Penalized
+    slug: persisted-cardinality-is-being-penal
+    source: CS
+  - asset_type: Monitor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: monitors/histogram-persisted-writes-is-being-penal.yaml
+    name: Histogram Persisted Writes Is Being Penalized
+    slug: histogram-persisted-writes-is-being-penal
+    source: CS
+  - asset_type: Monitor
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: monitors/histogram-persisted-cardinality-is-being-penal.yaml
+    name: Histogram Persisted Cardinality Is Being Penalized
+    slug: histogram-persisted-cardinality-is-being-penal
+    source: CS
+  - asset_type: NotificationPolicy
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: notification-policies/chrono-platform-notification-policy.yaml
+    name: Chronosphere Platform Notification Policy
+    slug: chronosphere-platform-notification-policy
+    source: CS
