@@ -1,0 +1,30 @@
+api_version: v1/config
+kind: Monitor
+spec:
+  slug: persisted-writes-license-exceeded
+  name: Persisted Writes License Exceeded
+  collection_slug: chronosphere-platform-collections
+  labels:
+    env: prod
+    team: infra
+  annotations:
+    message_critical: The persisted writes license has been exceeded.
+    message_warning: The persisted writes license is almost exceeded.
+  signal_grouping: {}
+  series_conditions:
+    defaults:
+      warn:
+        conditions:
+          - op: GT
+            value: 0.95
+            sustain_secs: 1800
+            resolve_sustain_secs: 60
+      critical:
+        conditions:
+          - op: GEQ
+            value: 1
+            sustain_secs: 300
+            resolve_sustain_secs: 60
+  notification_policy_slug: chronosphere-platform-notification-policy
+  interval_secs: 60
+  prometheus_query: "(\n\tsum(chrono_metrics_persisted_writes_license_dpps_consumed{datapoint_type=\"standard\"})\n\t/\n\t(\n\t\tsum(chrono_metrics_persisted_writes_license_dpps_capacity{datapoint_type=\"standard\"})\n\t\tor\n\t\tsum(chrono_metrics_persisted_writes_license_dpps_limit{datapoint_type=\"standard\"})\n\t)\n)\nor\n(limit_service_persisted_count / (limit_service_capacity_persist_limit or limit_service_licensed_persist_limit))"
