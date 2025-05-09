@@ -77,12 +77,12 @@ NOTIFICATION_POLICY_EXPECTED_STRUCTURE = {
 }
 
 def main():
-    if len(sys.argv) != 2:
+    if len(sys.argv) < 2:
         print("Correct Usage: python validate_addon.py <list of changed files>")
         sys.exit(1)
     
     # Step 1: List of changed_files (input from GitHub Actions workflow)
-    changed_files = sys.argv[1]
+    changed_files = sys.argv[1:]
     print(changed_files)
 
     # Step 2: Group by vendor-product
