@@ -1,0 +1,31 @@
+name: Validate Addon Templates
+
+on:
+  push:
+    branches:
+      - add-pr-commit-validation
+    paths:
+      - 'templates/**'
+  pull_request:
+    branches:
+      - main
+      - staging
+    paths:
+      - 'templates/**'
+
+jobs:
+  validate-addon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: tj-actions/changed-files@v44
+        id: changed-files
+        with:
+          files: |
+            templates/**
+
+      - name: Run validation if templates changed
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          echo "Changed files: ${{ steps.changed-files.outputs.all_changed_files }}"
+          python3 .utils/validate_addon.py ${{ steps.changed-files.outputs.all_changed_files }}
