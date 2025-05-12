@@ -107,7 +107,7 @@ def main():
             existing_asset_dirs = validate_vendor_product_dir(vendor_product, files)
             validate_cross_file_references(vendor_product, files, existing_asset_dirs)
             print(f"templates/{vendor_product} passed validation")
-        except:
+        except Exception as e:
             all_errors.append(str(e))
 
         if all_errors:
