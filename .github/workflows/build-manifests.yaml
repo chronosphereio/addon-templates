@@ -1,0 +1,37 @@
+name: Generate Manifests JSON
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+jobs:
+  generate:
+    name: Build manifest JSON and publish to GitHub Pages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Generate manifest JSON
+        run: |
+          BRANCH_NAME=${GITHUB_REF##*/} python scripts/generate-manifest-json.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .utils/output
+          publish_branch: gh-pages
+          keep_files: true
+
