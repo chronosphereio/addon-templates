@@ -1,12 +1,31 @@
-# Contributing 
+# Contributing
 
-We love community contributions! Help us expand this project with your configured collector templates.
+We love community contributions! Help us grow this project by adding your configured collector templates.
 
-Have an idea, but don't know where to start? Open an issue and we'll help you!
+Have an idea but not sure where to start? Open an issue and we'll help guide you.
+
+## Prerequisites
+
+To contribute to this project, you’ll need:
+
+- Access to a Chronosphere instance for development
+- Access to the [Chronoctl CLI](https://docs.chronosphere.io/tooling/chronoctl) with your organization name and API token
+- A fork of this repository
+
+## Start Here!
+
+Want to contribute an asset to this library? Follow these steps:
+
+1. Fork this repo
+2. clone your fork locally (or if you're into using the github UI you can certainly do that!) 
+3. Follow the project structure below to create a service folder for your asset. 
+4. Make sure if you're creating a new service that your service has a manifest with all the needed information. There are detailed breakdowns of what should be in the manifest and how to retrieve your assets from the chronosphere to add to the template in this repo.  
+   - If you're adding an asset to an existing service make sure to add your asset to the manifest
+5. Once you're work is ready to be pushed back to this report, please create a pull request to merge your fork & branch with the `staging` branch of this repo.
 
 ## Project Structure
 
-Configurations must be stored in a logical structure:
+Configurations should follow this logical structure:
 
 ```text
 vendor-product/
@@ -22,22 +41,26 @@ vendor-product/
         dashboard-screenshot1.png
 ```
 
-`<vendor>` is a normalized form of the vendor's name, for example: `Palo Alto Networks` to `panw`, or when there is no specific vendor use a descriptive like `linux` for linux os logs. 
+`<vendor>` should be a normalized form of the vendor name, e.g., Palo Alto Networks → panw. If there's no vendor, use something descriptive like linux.
 
-`<product>` is a normalized form of the vendor's product name, for example: `Cortex XDR` to `cortex_xdr`. For an individual service or product provided by a vendor, the recommended structure would be for the top level template directory to reflect the service, for example `aws-s3`. 
-`<template_name>` is a simple descriptive name for the collector template.
+`<product>` should also be normalized, e.g., Cortex XDR → cortex_xdr. For vendor-specific services (like AWS S3), use aws-s3 as the top-level directory.
 
-`<base-platform-required-assets>` are the base organizational structure required to import specific asset types like dashboards, monitors, data shaping rule and others. If a folder contains these asset types, the required asset yamls should be present within the vendor-product directory.
+`<template_name>` should be a simple, descriptive name for the collector template.
+
+`<base-platform-required-assets>` are foundational config files (e.g., teams, collections) required to support asset imports.
 
 ### Lua Script Examples
 
-Lua script examples should all be stored in the following path: `processors/lua_examples/<lua_name>/template.json` using the same logical structure as other projects. 
+All Lua script examples must be stored under:
 
-`<lua_name>` is a descriptive name for the function of the lua script in question.
+```processors/lua_examples/<lua_name>/template.json```
+
+Use `<lua_name>` as a descriptive name for the function of the Lua script.
+
 
 ### Manifest Files:
 
-The manifest file is a requirement within each vendor-product directory. It serves the purpose of a general inventory of what is included in that package as well as including any relevant links to outside documentation or dependencies. 
+Each vendor-product directory must contain a manifest.yaml, which serves as an inventory of the assets included in the package and any relevant external documentation.
 
 #### Example and key:
 
@@ -79,6 +102,19 @@ asset_list:
 | config_required      | asset item           | Required            | Boolean value defining whether or not the asset requires a configuration file.                                                                                                                | boolean string | "yes", "no"                                            |
 | description          | asset item           | Required            | Describes the nature and utility of the asset.                                                                                                                                                | string         |                                                        |
 | screenshot           | asset item           | Optional            | Screenshot of a dasbhoard included in the package.                                                                                                                                            |                |                                                        |
+## Contributing Platform-Related Assets
+
+To contribute platform-related assets such as Dashboards, Monitors, Rules, and other configurations, you must first create and test the asset within a Chronosphere instance. Once finalized, you can export the asset's configuration and add it to this repository in the required `chronoctl` format.
+
+You have two ways to retrieve the asset configuration:
+
+- **Chronosphere UI**: Create the asset (e.g., a dashboard) via the Chronosphere UI. Then, use the "View Code" option and select the `chronoctl` format to obtain the configuration.
+
+- **Chronoctl CLI**: After the asset has been created in a tenant, use the `chronoctl` CLI to export the configuration in the correct format. For example:
+bash
+  chronoctl dashboards read dashboard-slug > templates/service-name/dashboards/my-new-dashboard.yaml
+ ```
+
 ## Standards
 
 Each template directory must include a README file with a minimum set of details:

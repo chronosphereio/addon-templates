@@ -5,7 +5,7 @@ tags:
   - metric
   - alerting
   - alerts
-icon: bi-gear
+icon: resources/CS_flat_logo_H_all black.png
 data_source_and_docs:
   - title: Chronosphere Platform Overview of Alerting
     url: https://docs.chronosphere.io/investigate/alerts
