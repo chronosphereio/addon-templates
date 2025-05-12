@@ -3,16 +3,19 @@ name: Validate Addon Templates
 on:
   push:
     branches:
-      - main
-      - staging
-    paths:
-      - 'templates/**'
-  pull_request:
-    branches:
-      - main
-      - staging
-    paths:
-      - 'templates/**'
+      - add-pr-commit-validation
+  # push:
+  #   branches:
+  #     - main
+  #     - staging
+  #   paths:
+  #     - 'templates/**'
+  # pull_request:
+  #   branches:
+  #     - main
+  #     - staging
+  #   paths:
+  #     - 'templates/**'
 
 jobs:
   validate:
