@@ -113,7 +113,7 @@ def main():
         if all_errors:
             print("\nValidation failed with the following errors:")
             for err in all_errors:
-                print(f"- {err}")
+                print("\n".join(f"- {line}" for line in err.split(" | ")))
             sys.exit(1)
 
 # Validation functions------------------------------------------------------------
@@ -255,7 +255,7 @@ def check_required_files_in_assets(vendor_product, files, existing_asset_dirs):
         )
     if invalid_files:
         raise ValueError(
-            f"{vendor_product}: Invalid files found: " + ' | '.join(invalid_files)
+            f"{vendor_product}:\n" + '\n'.join(f"- {line}" for line in invalid_files)
         )
 
 # Check platform assets have team & collection YAMLs
