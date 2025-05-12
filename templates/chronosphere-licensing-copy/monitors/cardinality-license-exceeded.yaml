@@ -1,5 +1,5 @@
 api_version: v1/config
-kind: Monitor
+kind: Monito
 spec:
   name: Persisted Cardinality License Exceeded
   collection_slug: chronosphere-platform-collection
