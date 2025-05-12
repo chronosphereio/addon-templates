@@ -80,10 +80,15 @@ def main():
     if len(sys.argv) < 2:
         print("Correct Usage: python validate_addon.py <list of changed files>")
         sys.exit(1)
-    
+
     # Step 1: List of changed_files (input from GitHub Actions workflow)
-    changed_files = sys.argv[1:]
-    print(changed_files)
+    changed_files = sys.argv[1]
+    with open(changed_files, 'r') as f:
+        changed_files = [line.strip() for line in f if line.strip()]
+
+    print(f"Found {len(changed_files)} files to validate:")
+    for file in changed_files:
+        print(file)
 
     # Step 2: Group by vendor-product
     changed_by_dir = defaultdict(list)
