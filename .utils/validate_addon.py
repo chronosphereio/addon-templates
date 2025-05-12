@@ -100,13 +100,21 @@ def main():
                 changed_by_dir[vendor_product].append(changed_file)
     
     # Step 3: Directory-level, file-level & cross-file validation 
+    all_errors = []
     for vendor_product, files in changed_by_dir.items():
         print(f"\nValidating templates/{vendor_product}")
-        
-        existing_asset_dirs = validate_vendor_product_dir(vendor_product, files)
-        validate_cross_file_references(vendor_product, files, existing_asset_dirs)
-        
-        print(f"templates/{vendor_product} passed validation")
+        try:
+            existing_asset_dirs = validate_vendor_product_dir(vendor_product, files)
+            validate_cross_file_references(vendor_product, files, existing_asset_dirs)
+            print(f"templates/{vendor_product} passed validation")
+        except:
+            all_errors.append(str(e))
+
+        if all_errors:
+            print("\nValidation failed with the following errors:")
+            for err in all_errors:
+                print(f"- {err}")
+            sys.exit(1)
 
 # Validation functions------------------------------------------------------------
 
