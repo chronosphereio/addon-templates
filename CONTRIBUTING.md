@@ -17,11 +17,11 @@ To contribute to this project, you’ll need:
 Want to contribute an asset to this library? Follow these steps:
 
 1. Fork this repo
-2. clone your fork locally (or if you're into using the github UI you can certainly do that!) 
-3. Follow the project structure below to create a service folder for your asset. 
-4. Make sure if you're creating a new service that your service has a manifest with all the needed information. There are detailed breakdowns of what should be in the manifest and how to retrieve your assets from the chronosphere to add to the template in this repo.  
+2. Clone your fork locally (or if you're into using the github UI you can certainly do that!) 
+3. Follow the project structure below to create a service folder for your asset 
+4. Make sure if you're creating a new service that your service has a manifest with all the needed information. There are detailed breakdowns of what should be in the manifest and how to retrieve your assets from Chronosphere to add to the template in this repo  
    - If you're adding an asset to an existing service make sure to add your asset to the manifest
-5. Once you're work is ready to be pushed back to this report, please create a pull request to merge your fork & branch with the `staging` branch of this repo.
+5. Once you're work is ready to be pushed back to this repo, please create a pull request to merge your fork and branch with the `staging` branch of this repo
 
 ## Project Structure
 
@@ -108,10 +108,11 @@ To contribute platform-related assets such as Dashboards, Monitors, Rules, and o
 
 You have two ways to retrieve the asset configuration:
 
-- **Chronosphere UI**: Create the asset (e.g., a dashboard) via the Chronosphere UI. Then, use the "View Code" option and select the `chronoctl` format to obtain the configuration.
+- **Chronosphere UI**: Create the asset (e.g., a dashboard) via the Chronosphere UI. Then, use the "View Code" option and select the `chronoctl` format to obtain the configuration
 
 - **Chronoctl CLI**: After the asset has been created in a tenant, use the `chronoctl` CLI to export the configuration in the correct format. For example:
-bash
+
+```bash 
   chronoctl dashboards read dashboard-slug > templates/service-name/dashboards/my-new-dashboard.yaml
  ```
 
