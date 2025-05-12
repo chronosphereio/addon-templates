@@ -3,7 +3,7 @@ kind: Monitor
 spec:
   slug: persisted-writes-is-being-penal
   name: Persisted Writes Is Being Penalized
-  collection_slug: chronosphere-platform-collection
+  collection_slug: chronosphere-collection
   labels:
     env: prod
     team: infra

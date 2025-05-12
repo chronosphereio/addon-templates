@@ -3,7 +3,7 @@ kind: Monitor
 spec:
   slug: matched-writes-license-exceeded
   name: Matched Writes License Exceeded
-  collection_slug: chronosphere-platform
+  collection_slug: chronosphere-collection
   labels:
     env: prod
     team: infra
