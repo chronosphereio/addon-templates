@@ -53,7 +53,7 @@ jobs:
 
           # Collect all files from vendor-product directories
           while read vendor_product; do
-            find "templates/$vendor_product" -type f
+            find "../../templates/$vendor_product" -type f
           done > all_files_to_validate.txt
 
           # Validate the collected list of files
