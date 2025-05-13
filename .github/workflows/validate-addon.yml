@@ -25,13 +25,10 @@ jobs:
     steps:
       - name: Check out repository code into GitHub Actions workflow
         uses: actions/checkout@v3
-      - name: Install Poetry
-        run: curl -sSL https://install.python-poetry.org | python3
-      - name: Add Poetry to PATH
-        run: echo "${HOME}/.local/bin" >> $GITHUB_PATH
       - name: Install dependencies
-        working-directory: .utils/validation-script
-        run: poetry install --no-root
+        run: |
+          pip install --upgrade pip
+          pip install -r .utils/validation-script/requirements.txt
       - name: Get changed files
         uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
         id: changed-files
@@ -59,7 +56,7 @@ jobs:
           if [ -s all_files_to_validate.txt ]; then
             echo "Validating files:"
             cat all_files_to_validate.txt
-                poetry run --directory .utils/validation-script python validate_addon.py ../../all_files_to_validate.txt
+            python3 .utils/validate_addon.py all_files_to_validate.txt
           else
             echo "No files to validate."
           fi
