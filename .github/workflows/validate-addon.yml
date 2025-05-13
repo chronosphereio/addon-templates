@@ -27,7 +27,6 @@ jobs:
         uses: actions/checkout@v3
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
           pip install -r .utils/validation-script/requirements.txt
       - name: Get changed files
         uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
@@ -56,7 +55,7 @@ jobs:
           if [ -s all_files_to_validate.txt ]; then
             echo "Validating files:"
             cat all_files_to_validate.txt
-            python3 .utils/validate_addon.py all_files_to_validate.txt
+            python3 .utils/validation-script/validate_addon.py all_files_to_validate.txt
           else
             echo "No files to validate."
           fi
