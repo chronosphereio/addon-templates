@@ -59,7 +59,7 @@ jobs:
           if [ -s all_files_to_validate.txt ]; then
             echo "Validating files:"
             cat all_files_to_validate.txt
-                poetry run python .utils/validation-script/validate_addon.py all_files_to_validate.txt
+                poetry run --directory .utils/validation-script python validate_addon.py ../../all_files_to_validate.txt
           else
             echo "No files to validate."
           fi
