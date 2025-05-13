@@ -39,7 +39,6 @@ jobs:
           files: |
             templates/**
       - name: Run validation on all files within changed vendor-product directories 
-        working-directory: .utils/validation-script
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
           # Output changed files
@@ -53,14 +52,14 @@ jobs:
 
           # Collect all files from vendor-product directories
           while read vendor_product; do
-            find "../../templates/$vendor_product" -type f
+            find "templates/$vendor_product" -type f
           done > all_files_to_validate.txt
 
           # Validate the collected list of files
           if [ -s all_files_to_validate.txt ]; then
             echo "Validating files:"
             cat all_files_to_validate.txt
-            poetry run python validate_addon.py all_files_to_validate.txt
+                poetry run --directory .utils/validation-script python .utils/validation-script/validate_addon.py all_files_to_validate.txt
           else
             echo "No files to validate."
           fi
