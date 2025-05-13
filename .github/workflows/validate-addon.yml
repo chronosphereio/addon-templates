@@ -30,6 +30,7 @@ jobs:
       - name: Add Poetry to PATH
         run: echo "${HOME}/.local/bin" >> $GITHUB_PATH
       - name: Install dependencies
+        working-directory: .utils/validation-script
         run: poetry install
       - name: Get changed files
         uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
