@@ -62,13 +62,13 @@ def main():
         cross_file_errors = validate_cross_file_references(vendor_product, files, existing_asset_dirs)
         all_errors.extend(cross_file_errors)
 
-        print(f"templates/{vendor_product} passed validation")
-
     if all_errors:
         print("\nValidation failed with the following errors:")
         for err in all_errors:
             print(f"- {err}")
         sys.exit(1)
+    else:
+        print(f"templates/{vendor_product} passed validation")
 
 # Validation functions------------------------------------------------------------
 
