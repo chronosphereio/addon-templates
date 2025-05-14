@@ -17,7 +17,7 @@ asset_list:
     description: ''
     file: chrono-platform-collection.yaml
     name: Chronosphere Platform
-    slug: chronosphere-platform-collection
+    slug: chronosphere-collection
     source: CS
   - asset_type: Team
     author: Chronosphere
@@ -25,7 +25,7 @@ asset_list:
     description: ''
     file: chrono-platform-team.yaml
     name: Chronosphere Platform
-    slug: chronosphere-platform-team
+    slug: chronosphere-team
     source: CS
   - asset_type: Monitor
     author: Chronosphere
