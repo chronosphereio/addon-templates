@@ -6,7 +6,7 @@ tags:
   - metric
   - cardinality
   - dpps
-icon: bi-gear
+icon: resources/CS_flat_logo_H_all black.png
 data_source_and_docs:
   - title: Chronosphere Platform Licensing
     url: https://docs.chronosphere.io/administer/limits-licensing/licensing
@@ -17,7 +17,7 @@ asset_list:
     description: ''
     file: chrono-platform-collection.yaml
     name: Chronosphere Platform
-    slug: chronosphere-platform-collection
+    slug: chronosphere-collection
     source: CS
   - asset_type: Team
     author: Chronosphere
@@ -25,7 +25,7 @@ asset_list:
     description: ''
     file: chrono-platform-team.yaml
     name: Chronosphere Platform
-    slug: chronosphere-platform-team
+    slug: chronosphere-team
     source: CS
   - asset_type: Monitor
     author: Chronosphere

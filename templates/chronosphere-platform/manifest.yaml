@@ -1,0 +1,36 @@
+tech_type: chronosphere-platform
+description: ​Chronosphere is a cloud-native observability platform designed to help engineering teams monitor and troubleshoot complex, distributed applications at scale.
+tags:
+  - chronosphere
+  - metric
+  - alerting
+  - alerts
+icon: resources/CS_flat_logo_H_all black.png
+data_source_and_docs:
+  - title: Chronosphere Platform Overview of Alerting
+    url: https://docs.chronosphere.io/investigate/alerts
+asset_list:
+  - asset_type: Collection
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: chrono-platform-collection.yaml
+    name: Chronosphere Platform
+    slug: chronosphere-platform-collection
+    source: CS
+  - asset_type: Team
+    author: Chronosphere
+    config_required: 'no'
+    description: ''
+    file: chrono-platform-team.yaml
+    name: Chronosphere Platform
+    slug: chronosphere-platform-team
+    source: CS
+  - asset_type: Dashboard
+    author: Chronosphere
+    config_required: 'yes'
+    description: 'Overview of all tenant alerting. Please set up your environment variables, currently using environment as the source label.'
+    file: dashboards/alerting-dashboard.yaml
+    name: Alerting Overview
+    slug: alerting-overview
+    source: CS
