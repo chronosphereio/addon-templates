@@ -31,6 +31,7 @@ asset_list:
     config_required: 'yes'
     description: 'Overview of all tenant alerting. Please set up your environment variables, currently using environment as the source label.'
     file: dashboards/alerting-dashboard.yaml
+    screenshot: resources/alerts-overview-dash.png
     name: Alerting Overview
     slug: alerting-overview
     source: CS
