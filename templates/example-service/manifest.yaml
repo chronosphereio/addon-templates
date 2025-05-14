@@ -28,4 +28,4 @@ asset_list:
     screenshot: resources/my-dashboard-example.png
     author: Chronosphere
     source: CS
-    description: 'A nonfunctioning dashboard simply used to populate the list of assets. '
+    description: 'A nonfunctioning dashboard simply used to populate the list of assets.'
