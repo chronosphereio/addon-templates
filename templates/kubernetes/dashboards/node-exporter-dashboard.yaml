@@ -3,7 +3,7 @@ kind: Dashboard
 spec:
   slug: node-exporter
   name: Node Exporter
-  collection_slug: k8s-collection
+  collection_slug: kubernetes-collection
   dashboard_json: '{"kind":"Dashboard","spec":{"datasource":null,"duration":"1h","layouts":[{"kind":"Grid","spec":{"display":{"collapse":{"open":true},"title":"Basic
     CPU / Mem / Disk Gauge"},"items":[{"content":{"$ref":"#/spec/panels/cpuUsage-20"},"height":4,"width":6,"x":0,"y":0},{"content":{"$ref":"#/spec/panels/memoryUsage-16"},"height":4,"width":6,"x":6,"y":0},{"content":{"$ref":"#/spec/panels/diskUsage-154"},"height":4,"width":6,"x":12,"y":0},{"content":{"$ref":"#/spec/panels/cpuSystemLoad1MAvg-19"},"height":4,"width":6,"x":18,"y":0}]}},{"kind":"Grid","spec":{"display":{"collapse":{"open":true},"title":"Basic
     CPU / Mem / Disk Info"},"items":[{"content":{"$ref":"#/spec/panels/totalCpu-14"},"height":3,"width":6,"x":0,"y":0},{"content":{"$ref":"#/spec/panels/totalMemory-75"},"height":3,"width":6,"x":6,"y":0},{"content":{"$ref":"#/spec/panels/totalDisk-23"},"height":3,"width":6,"x":12,"y":0},{"content":{"$ref":"#/spec/panels/cpuSystemLoad1MAvg-17"},"height":3,"width":6,"x":18,"y":0}]}},{"kind":"Grid","spec":{"display":{"collapse":{"open":true},"title":"Basic

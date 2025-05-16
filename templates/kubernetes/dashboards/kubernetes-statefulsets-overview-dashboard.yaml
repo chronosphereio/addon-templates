@@ -3,7 +3,7 @@ kind: Dashboard
 spec:
   slug: kubernetes-statefulsets-overview
   name: Kubernetes StatefulSets Overview
-  collection_slug: k8s-collection
+  collection_slug: kubernetes-collection
   dashboard_json: '{"kind":"Dashboard","spec":{"events":[],"panels":{"CPUUsage":{"kind":"Panel","spec":{"display":{"description":"","name":"CPU
     Usage "},"formulas":[],"links":[],"plugin":{"kind":"TimeSeriesChart","spec":{}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"query":"sum(rate(container_cpu_usage_seconds_total{container!=\"\",
     k8s_cluster_name=~\"$kube_cluster_name\", k8s_namespace_name=~\"$kube_namespace\"}[$__rate_interval]))"}}}}]}},"cpuRequestsLimitsAndUsageNoTargets-15":{"kind":"Panel","spec":{"display":{"description":"","name":"CPU
