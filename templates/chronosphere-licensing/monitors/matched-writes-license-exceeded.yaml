@@ -25,6 +25,6 @@ spec:
             value: 0.95
             sustain_secs: 300
             resolve_sustain_secs: 60
-  notification_policy_slug: chronosphere-platform-notification-policy
+  notification_policy_slug: chronosphere-notification-policy
   interval_secs: 60
   prometheus_query: "(\n\t(sum(chrono_metrics_matched_writes_license_dpps_consumed{datapoint_type=\"standard\"}))\n\t/\n\t(\n\t\tsum(chrono_metrics_matched_writes_license_dpps_capacity{datapoint_type=\"standard\"})\n\t\tor\n\t\tsum(chrono_metrics_matched_writes_license_dpps_limit{datapoint_type=\"standard\"})\n\t)\n)\nor\n(\n\t(max(limit_service_matched_count) or vector (0))\n\t/\n\t(limit_service_capacity_matched_limit or limit_service_licensed_matched_limit)\n)"

@@ -14,17 +14,17 @@ asset_list:
     author: Chronosphere
     config_required: 'no'
     description: ''
-    file: chrono-platform-collection.yaml
-    name: Chronosphere Platform
-    slug: chronosphere-platform-collection
+    file: chronosphere-collection.yaml
+    name: Chronosphere
+    slug: chronosphere-collection
     source: CS
   - asset_type: Team
     author: Chronosphere
     config_required: 'no'
     description: ''
-    file: chrono-platform-team.yaml
-    name: Chronosphere Platform
-    slug: chronosphere-platform-team
+    file: chronosphere-team.yaml
+    name: Chronosphere
+    slug: chronosphere-team
     source: CS
   - asset_type: Dashboard
     author: Chronosphere

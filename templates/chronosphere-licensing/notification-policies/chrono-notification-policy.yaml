@@ -1,8 +1,8 @@
 api_version: v1/config
 kind: NotificationPolicy
 spec:
-  slug: chronosphere-platform-notification-policy
-  name: Chronosphere Platform Notification Policy
+  slug: chronosphere-notification-policy
+  name: Chronosphere Notification Policy
   team_slug: chronosphere-team
   routes:
     defaults:
