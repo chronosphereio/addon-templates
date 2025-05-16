@@ -15,16 +15,16 @@ asset_list:
     author: Chronosphere
     config_required: 'no'
     description: ''
-    file: chrono-platform-collection.yaml
-    name: Chronosphere Platform
+    file: chronosphere-collection.yaml
+    name: Chronosphere
     slug: chronosphere-collection
     source: CS
   - asset_type: Team
     author: Chronosphere
     config_required: 'no'
     description: ''
-    file: chrono-platform-team.yaml
-    name: Chronosphere Platform
+    file: chrono-team.yaml
+    name: Chronosphere
     slug: chronosphere-team
     source: CS
   - asset_type: Monitor
@@ -111,7 +111,7 @@ asset_list:
     author: Chronosphere
     config_required: 'no'
     description: ''
-    file: notification-policies/chrono-platform-notification-policy.yaml
+    file: notification-policies/chrono-notification-policy.yaml
     name: Chronosphere Platform Notification Policy
-    slug: chronosphere-platform-notification-policy
+    slug: chronosphere-notification-policy
     source: CS
