@@ -1,0 +1,56 @@
+name: Validate Addon Templates
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+    paths:
+      - 'templates/**'
+  pull_request:
+    branches:
+      - main
+      - staging
+    paths:
+      - 'templates/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code into GitHub Actions workflow
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          pip install -r .utils/validation-script/requirements.txt
+      - name: Get changed files
+        uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
+        id: changed-files
+        with:
+          files: |
+            templates/**
+      - name: Run validation on all files within changed vendor-product directories 
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          # Output changed files
+          echo "Changed files: ${{ steps.changed-files.outputs.all_changed_files }}" | \
+          
+          # Extract vendor-product directories under templates/, sort & de-deduplicate
+          echo "${{ steps.changed-files.outputs.all_changed_files }}" | \
+          xargs -n1 dirname | \
+          awk -F/ '{ print $2 }' | \
+          sort -u | \
+
+          # Collect all files from vendor-product directories
+          while read vendor_product; do
+            find "templates/$vendor_product" -type f
+          done > all_files_to_validate.txt
+
+          # Validate the collected list of files
+          if [ -s all_files_to_validate.txt ]; then
+            echo "Validating files:"
+            cat all_files_to_validate.txt
+            python3 .utils/validation-script/validate_addon.py all_files_to_validate.txt
+          else
+            echo "No files to validate."
+          fi
