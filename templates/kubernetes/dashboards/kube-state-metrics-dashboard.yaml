@@ -3,7 +3,7 @@ kind: Dashboard
 spec:
   slug: kube-state-metrics
   name: Kube State Metrics
-  collection_slug: k8s-collection
+  collection_slug: kubernetes-collection
   dashboard_json: '{"kind":"Dashboard","spec":{"events":[],"panels":{"allocatableCpu-28":{"kind":"Panel","spec":{"display":{"name":"Allocatable
     CPU"},"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"List","position":"Bottom","values":[]},"tooltip":{"mode":"nearby"},"visual":{"area_opacity":0.05},"y_axis":{"unit":{"abbreviate":true,"kind":"Decimal"}},"y_axis_right":{"unit":{"abbreviate":true,"kind":"Decimal"}}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"min_step":"","query":"kube_node_status_allocatable{cluster_name=\"${cluster_name}\",
     resource=\"cpu\"}","series_name_format":"{{node}}"}}}}]}},"allocatableMemory-30":{"kind":"Panel","spec":{"display":{"name":"Allocatable

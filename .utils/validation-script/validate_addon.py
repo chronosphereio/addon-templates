@@ -20,9 +20,9 @@ ALL_ASSET_TYPES = {
     "dashboards": (".yaml", ".yml"),
     "monitors": (".yaml", ".yml"),
     "notification-policies": (".yaml", ".yml"),
-    "collectors": (".yaml", ".yml"),
-    "processors": (".json",),
-    "parsers": (".conf",),
+    "collectors": (".yaml", ".yml", ".md"),
+    "processors": (".json", ".md"),
+    "parsers": (".conf", ".md"),
 }
 
 PLATFORM_ASSET_TYPES = ["dashboards", "monitors", "notification-policies"]
@@ -68,7 +68,7 @@ def main():
             print(f"- {err}")
         sys.exit(1)
     else:
-        print(f"templates/{vendor_product} passed validation")
+        print(f"Validation passed!")
 
 # Validation functions------------------------------------------------------------
 
@@ -240,7 +240,7 @@ def validate_manifest_file(manifest_file):
         return [f"{manifest_file}: YAML could not be parsed. Error: {e}"]
         
     try:
-        Manifest.parse_obj(data)
+        Manifest.model_validate(data)
     except Exception as e:
         return [f"{manifest_file}: {e}"]
 
@@ -254,7 +254,7 @@ def validate_team_file(team_file):
         return [f"{team_file}: YAML could not be parsed. Error: {e}"]
 
     try:
-        Team.parse_obj(data)
+        Team.model_validate(data)
     except Exception as e:
         return [f"{team_file}: {e}"]
 
@@ -268,7 +268,7 @@ def validate_collection_file(collection_file):
         return [f"{collection_file}: YAML could not be parsed. Error: {e}"]
 
     try:
-        Collection.parse_obj(data)
+        Collection.model_validate(data)
     except Exception as e:
         return [f"{collection_file}: {e}"]
     
@@ -284,7 +284,7 @@ def validate_dashboard_file(dashboard_file):
         return [f"{dashboard_file}: YAML could not be parsed. Error: {e}"]
 
     try:
-        Dashboard.parse_obj(data)
+        Dashboard.model_validate(data)
     except Exception as e:
         errors.append(f"{dashboard_file}: {e}")
 
@@ -307,7 +307,7 @@ def validate_monitor_file(monitor_file):
         return [f"{monitor_file}: YAML could not be parsed. Error: {e}"]
 
     try:
-        Monitor.parse_obj(data)
+        Monitor.model_validate(data)
     except Exception as e:
         return [f"{monitor_file}: {e}"]
     
@@ -321,7 +321,7 @@ def validate_notif_policy_file(notif_policy_file):
         return [f"{notif_policy_file}: YAML could not be parsed. Error: {e}"]
 
     try:
-        NotificationPolicy.parse_obj(data)
+        NotificationPolicy.model_validate(data)
     except Exception as e:
         return [f"{notif_policy_file}: {e}"]
 

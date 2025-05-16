@@ -11,17 +11,17 @@ class Asset(BaseModel):
     slug: str
     file: str
     config_required: str
-    description: str
+    description: Optional[str] = None
     screenshot: Optional[str] = None
     author: Optional[str] = None
     source: Optional[str] = None
 
 class Manifest(BaseModel):
     tech_type: str
-    description: Optional[str]
-    tags: Optional[List[str]]
-    icon: Optional[str]
-    data_source_and_docs: Optional[List[DataSourceAndDoc]]
+    description: Optional[str] = None
+    tags: Optional[List[str]] = None
+    icon: Optional[str] = None
+    data_source_and_docs: Optional[List[DataSourceAndDoc]] = None
     asset_list: Optional[List[Asset]] = None
 
     @validator('asset_list')

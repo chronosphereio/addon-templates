@@ -13,6 +13,7 @@ spec:
       warn:
         conditions:
           - op: GT
+            value: 0
             sustain_secs: 300
             resolve_sustain_secs: 60
   notification_policy_slug: chronosphere-notification-policy
