@@ -3,7 +3,7 @@ kind: Dashboard
 spec:
   slug: kubernetes--views--global
   name: Kubernetes / Views / Global
-  collection_slug: k8s-collection
+  collection_slug: kubernetes-collection
   dashboard_json: '{"kind":"Dashboard","spec":{"events":[],"panels":{"clusterCpuUtilization-72":{"kind":"Panel","spec":{"display":{"name":"Cluster
     CPU Utilization"},"plugin":{"kind":"TimeSeriesChart","spec":{"legend":{"mode":"List","position":"Bottom","values":[]},"tooltip":{"mode":"nearby"},"visual":{"area_opacity":0.05},"y_axis":{"max":1,"min":0,"unit":{"abbreviate":true,"decimal_places":2,"kind":"PercentDecimal"}},"y_axis_right":{"unit":{"abbreviate":true,"kind":"Decimal"}}}},"queries":[{"kind":"DataQuery","spec":{"plugin":{"kind":"PrometheusTimeSeriesQuery","spec":{"min_step":"$resolution","query":"sum(rate(node_cpu_seconds_total{cluster_name=~\"$cluster_name\",mode!=\"idle\"}[$__rate_interval]))
     /\nsum(rate(node_cpu_seconds_total{cluster_name=~\"$cluster_name\"}[$__rate_interval]))","series_name":{"name_pattern":"Avg
