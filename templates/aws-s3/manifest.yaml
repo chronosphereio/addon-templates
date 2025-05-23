@@ -5,7 +5,7 @@ tags:
   - s3
   - storage
   - amazon
-icon: bi-amazon
+icon: resources/aws-logo.svg
 data_source_and_docs:
   - title: Amazon S3 Storage
     url: https://docs.aws.amazon.com/AmazonS3/latest/userguide/metrics-dimensions.html

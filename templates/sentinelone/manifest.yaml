@@ -5,7 +5,7 @@ tags:
   - security
   - IT
   - automation
-icon: bi-wrench
+icon: resources/sentinel-one-logo.svg
 asset_list:
   - asset_type: Collector
     name: Sentinel One Collector

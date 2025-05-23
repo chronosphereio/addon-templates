@@ -5,7 +5,7 @@ tags:
   - cdn
   - hosting
   - cloud
-icon: bi-wrench
+icon: resources/cloudflare-logo.svg
 data_source_and_docs:
   - title: Cloudflare Prometheus Documentation
     url: https://blog.cloudflare.com/how-cloudflare-runs-prometheus-at-scale/

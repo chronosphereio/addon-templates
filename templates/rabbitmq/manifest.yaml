@@ -3,7 +3,7 @@ description: RabbitMQ is an open-source message broker that enables applications
 tags:
   - rabbitmq
   - messaging
-icon: bi-wrench
+icon: resources/rabbitmq-logo.svg
 data_source_and_docs:
   - title: RabbitMQ Prometheus Documentation
     url: https://www.rabbitmq.com/docs/prometheus

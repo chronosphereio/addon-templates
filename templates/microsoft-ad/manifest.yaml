@@ -4,7 +4,7 @@ tags:
   - microsoft
   - security
   - authentication
-icon: bi-microsoft
+icon: resources/microsoft-logo.svg
 data_source_and_docs:
   - title: Microsoft Active Directory Documentation
     url: https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/active-directory-overview

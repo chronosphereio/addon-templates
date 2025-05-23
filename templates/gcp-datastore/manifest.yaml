@@ -4,7 +4,7 @@ tags:
   - google
   - gcp
   - datastore
-icon: bi-google
+icon: resources/google-cloud-logo.svg
 data_source_and_docs:
   - title: Google Cloud Monitoring with PromQL
     url: https://cloud.google.com/monitoring/promql
