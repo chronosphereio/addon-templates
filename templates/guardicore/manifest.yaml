@@ -16,4 +16,4 @@ asset_list:
     slug: guardicore-parser
     file: parsers/syslog-guardicore-parser.conf
     config_required: 'yes'
-    description: Please modify if necessary
+    description: A parser is a component that interprets and transforms raw data into a structured format for analysis. This parser is specifically designed to be compatible with Chronospere's services.

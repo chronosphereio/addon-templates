@@ -15,10 +15,10 @@ asset_list:
     slug: okta-collector
     file: collectors/okta-api.yaml
     config_required: 'no'
-    description: Please modify if necessary
+    description: A collector is a component that gathers data from various sources, processes it, and sends it to a central system for analysis and storage. In the context of Okta, the collector is responsible for collecting identity and access data and sending it to Chronospere for analysis and reporting.
   - asset_type: Processor
     name: Okta Processor
     slug: okta-processor
     file: processors/Okta-Http-v1.json
     config_required: 'yes'
-    description: Please modify if necessary
+    description: Okta Processor is a component that processes and transforms data before it is stored or analyzed. This processor is specifically designed to be compatible with Chronospere's services.

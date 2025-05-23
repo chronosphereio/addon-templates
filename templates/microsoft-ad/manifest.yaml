@@ -14,4 +14,4 @@ asset_list:
     slug: microsoft-ad-processor
     file: processors/MS-AD-fluentbit-v1.json
     config_required: 'yes'
-    description: Please modify if necessary
+    description: A processor is a component that processes and transforms data before it is stored or analyzed. This processor is specifically designed to be compatible with Chronospere's services.
