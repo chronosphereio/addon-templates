@@ -3,8 +3,9 @@ description: Azure Active Directory (Azure AD) is Microsoft's cloud-based identi
 tags:
   - Microsoft
   - azure
-  - advertising
+  - identity
   - cloud
+  - security
 icon: resources/azure-logo.svg
 data_source_and_docs:
   - title: Azure Active Directory Documentation

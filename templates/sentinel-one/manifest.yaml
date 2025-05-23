@@ -12,4 +12,4 @@ asset_list:
     slug: sentinel-one-collector
     file: collectors/sentinel-one-api.yaml
     config_required: 'yes'
-    description: Please modify if necessary
+    description: A collector is a component that gathers data from various sources, processes it, and sends it to a central system for analysis and storage. In the context of SentinelOne, the collector is responsible for collecting endpoint data and sending it to Chronospere for analysis and review.

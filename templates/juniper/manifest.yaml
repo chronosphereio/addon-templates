@@ -4,11 +4,11 @@ tags:
   - Juniper
   - networking
   - IT
-icon: resources/juniper-logo.png
+icon: bi-wrench
 asset_list:
   - asset_type: Parser
     name: Juniper Parser
     slug: juniper-parser
     file: parsers/syslog-juniper-cli-parser.conf
     config_required: 'yes'
-    description: Please modify if necessary
+    description: A parser for Juniper devices that processes syslog messages and extracts relevant information for analysis. This parser is designed to work with Chronosphere

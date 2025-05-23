@@ -16,16 +16,16 @@ asset_list:
     slug: panw-firewall-parser
     file: parsers/syslog-palo-parser.conf
     config_required: 'yes'
-    description: Please modify if necessary
+    description: A Parser is a component that transforms data before it is stored or analyzed. This parser is specifically designed to be compatible with Chronospere's services.
   - asset_type: Processor
     name: PANW Firewall Threat Processor
     slug: panw-firewall-threat-processor
     file: processors/PAN-NGFW-Threat-v1.json
     config_required: 'yes'
-    description: Please modify if necessary
+    description: A processor is a component that processes and transforms data before it is stored or analyzed. This processor is specifically designed to be compatible with Chronospere's services.
   - asset_type: Processor
     name: PANW Firewall Traffic Processor
     slug: panw-firewall-traffic-processor
     file: processors/PAN-NGFW-Traffic-v1.json
     config_required: 'yes'
-    description: Please modify if necessary
+    description: A processor is a component that processes and transforms data before it is stored or analyzed. This processor is specifically designed to be compatible with Chronospere's services.
