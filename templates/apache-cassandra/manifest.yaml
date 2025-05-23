@@ -7,7 +7,7 @@ tags:
   - cassandra
   - apache
   - database
-icon: bi-wrench
+icon: resources/cassandra_logo.svg
 data_source_and_docs:
   - title: Apache Cassandra Documentation
     url: https://cassandra.apache.org/doc/4.1/cassandra/operating/metrics.html
