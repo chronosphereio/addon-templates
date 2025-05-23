@@ -5,7 +5,7 @@ tags:
   - EC2
   - aws
   - cloud
-icon: bi-amazon
+icon: resources/aws-logo.svg
 data_source_and_docs:
   - title: Amazon EC2 Documentation
     url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-PrometheusEC2.html

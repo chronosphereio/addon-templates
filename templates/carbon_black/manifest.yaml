@@ -3,7 +3,7 @@ description: Carbon Black is a cloud-native endpoint security platform that prov
 tags:
   - carbon black
   - security
-icon: bi-wrench
+icon: resources/carbon-black-logo.svg
 data_source_and_docs:
   - title: Carbon Black Documentation
     url: https://techdocs.broadcom.com/us/en/carbon-black.html

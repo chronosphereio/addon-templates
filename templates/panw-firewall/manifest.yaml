@@ -6,7 +6,7 @@ tags:
   - security
   - networking
   - security
-icon: bi-wrench
+icon: resources/panw-logo.svg
 data_source_and_docs:
   - title: Panw Firewall Admin Guide
     url: https://docs.prismacloud.io/en/compute-edition/22-12/admin-guide/firewalls/firewalls

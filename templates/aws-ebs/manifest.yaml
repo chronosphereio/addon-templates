@@ -5,7 +5,7 @@ tags:
   - aws
   - cloud
   - storage
-icon: bi-amazon
+icon: resources/aws-logo.svg
 data_source_and_docs:
   - title: AWS EBS Documentation
     url: https://docs.aws.amazon.com/ebs/latest/userguide/using_cloudwatch_ebs.html

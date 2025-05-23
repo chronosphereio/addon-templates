@@ -3,7 +3,7 @@ description: Cisco Nexus is a series of high-performance switches designed for d
 tags:
   - hardware
   - cisco
-icon: bi-wrench
+icon: resources/cisco-logo.svg
 data_source_and_docs:
   - title: Cisco UCC 5G SMF Metrics Reference
     url: https://www.cisco.com/c/en/us/td/docs/wireless/ucc/smf/2025-01/metrics-ref/b_ucc-5g-smf-metrics-reference-release-2025-01/m_5g-smf-statistics.html
