@@ -5,7 +5,7 @@ tags:
   - security
   - IT
   - authentication
-icon: bi-wrench
+icon: resources/okta-logo.svg
 data_source_and_docs:
   - title: Okta Documentation
     url: https://help.okta.com/en-us/content/index.htm?cshid=csh-index

@@ -2,7 +2,7 @@ tech_type: otel
 tags:
   - otel
   - collectors
-icon: bi-wrench
+icon: resources/open-telemetry-logo.svg
 data_source_and_docs:
   - title: OTEL Documentation
     url: https://opentelemetry.io/docs/

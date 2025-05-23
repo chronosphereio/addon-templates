@@ -4,7 +4,7 @@ tags:
   - guardicore
   - security
   - networking
-icon: bi-wrench
+icon: resources/akamai-logo.svg
 data_source_and_docs:
   - title: Guardicore Product Page
     url: https://www.akamai.com/products/akamai-guardicore-segmentation

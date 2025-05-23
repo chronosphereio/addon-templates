@@ -5,7 +5,7 @@ tags:
   - hardware
   - infrastructure
   - monitoring
-icon: bi-wrench
+icon: resources/dynatrace-logo.svg
 data_source_and_docs:
   - title: Dynatrace Documentation
     url: https://docs.dynatrace.com/docs

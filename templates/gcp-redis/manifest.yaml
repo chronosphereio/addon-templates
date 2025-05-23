@@ -6,7 +6,7 @@ tags:
   - redis
   - memory
   - database
-icon: bi-google
+icon: resources/google-cloud-logo.svg
 data_source_and_docs:
   - title: Ingest Google Cloud Metrics with chronosphere
     url: https://docs.chronosphere.io/ingest/metrics-traces/gcp

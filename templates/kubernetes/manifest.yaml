@@ -6,7 +6,7 @@ tags:
   - hardware
   - google
   - k8s
-icon: bi-google
+icon: resources/kubernetes-logo.svg
 data_source_and_docs:
   - title: cAdvisor Documentation
     url: https://github.com/google/cadvisor/blob/master/docs/storage/prometheus.md

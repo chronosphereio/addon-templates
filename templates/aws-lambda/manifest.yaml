@@ -6,7 +6,7 @@ tags:
   - cloud
   - compute
   - Lambda
-icon: bi-amazon
+icon: resources/aws-logo.svg
 data_source_and_docs:
   - title: AWS Lambda Documentation
     url: https://aws.amazon.com/blogs/opensource/integrating-the-aws-lambda-telemetry-api-with-prometheus-and-opensearch/

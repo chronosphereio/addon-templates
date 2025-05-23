@@ -6,7 +6,7 @@ tags:
   - prometheus
   - windows-hosts
   - microsoft
-icon: bi-windows
+icon: resources/windows-logo.svg
 data_source_and_docs:
   - title: Use Windows-exporter and Otel collector to send windows related metrics
       to Chronosphere

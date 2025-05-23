@@ -3,7 +3,7 @@ description: 'This is an example service simply to show examples of some of the 
 tags:
   - chronosphere
   - example
-icon: resources/face-2.svg
+icon: resources/face.svg
 data_source_and_docs:
   - title: Chronosphere Docs! Always a good read. 
     url: https://docs.chronosphere.io/
