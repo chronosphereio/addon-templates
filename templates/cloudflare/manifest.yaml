@@ -5,6 +5,7 @@ tags:
   - cdn
   - hosting
   - cloud
+  - security
 icon: resources/cloudflare-logo.svg
 data_source_and_docs:
   - title: Cloudflare Prometheus Documentation
@@ -15,4 +16,4 @@ asset_list:
     slug: cloudflare-processor
     file: processors/CloudFlare-HTTP-v2.json
     config_required: 'yes'
-    description: Please modify if necessary
+    description: A processor is a component that processes and transforms data before it is stored or analyzed. This processor is specifically designed to be compatible with Chronospere's services.

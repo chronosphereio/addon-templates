@@ -36,4 +36,4 @@ asset_list:
     config_required: 'yes'
     author: Chronosphere
     source: CS
-    description:
+    description: A processor for Open Telemetry data that id used to processor data so in such a way that it is compatible with Chronosphere's services.

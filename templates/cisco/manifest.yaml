@@ -13,4 +13,4 @@ asset_list:
     slug: cisco-nexus
     file: parsers/syslog-cisco-nexus-parser.conf
     config_required: 'yes'
-    description: Please modify if necessary
+    description: A parser for Cisco Nexus devices that extracts relevant fields from syslog messages. This parser is designed to work with the Cisco Nexus Parser configuration file and is essential for processing logs from Cisco Nexus switches.
