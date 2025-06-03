@@ -1,0 +1,13 @@
+api_version: v1/config
+kind: DropRule
+spec:
+  slug: kubelet_allowlist
+  name: Allowlist - kubelet
+  created_at: "2024-10-24T17:53:15.000Z"
+  updated_at: "2024-12-10T19:57:37.000Z"
+  mode: ENABLED
+  filters:
+    - name: __name__
+      value_glob: kubelet_*
+    - name: __name__!
+      value_glob: '{kubelet_volume_stats_available_bytes,kubelet_volume_stats_capacity_bytes,kubelet_volume_stats_capacity_bytes,kubelet_volume_stats_inodes,kubelet_volume_stats_inodes_used,kubelet_volume_stats_used_bytes,kubelet_volume_stats_capacity_bytes,kubelet_volume_stats_inodes,kubelet_volume_stats_inodes_used,kubelet_volume_stats_used_bytes,kubelet_node_name,kubelet_pod_worker_duration_seconds_bucket,kubelet_volume_stats_available_bytes,kubelet_volume_stats_capacity_bytes,kubelet_volume_stats_inodes,kubelet_volume_stats_inodes_free,kubelet_volume_stats_inodes_used,kubelet_volume_stats_used_bytes,kube_hpa_spec_min_replicas,kube_hpa_status_current_replicas,kubelet_http_inflight_requests}'

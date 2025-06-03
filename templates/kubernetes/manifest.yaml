@@ -123,3 +123,28 @@ asset_list:
     description: A statefulset runs a group of pods, and maintains a sticky identity
       for each of those pods. this is useful for managing applications that need persistent
       storage or a stable, unique network identity.
+  - asset_type: DropRule
+    name: Allowlist - cadvisor
+    slug: cadvisor_allowlist
+    file: drop-rules/cadvisor-allowlist.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: An allow list for Cadvisor metrics. This drop rule allows you to
+      keep only the metrics that are relevant for your use case, while dropping the rest.
+  - asset_type: DropRule
+    name: Allowlist - Kube State Metrics
+    slug: kube_state_metrics_allowlist
+    file: drop-rules/kube-state-allowlist.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: An allow list for Kube State Metrics. This drop rule allows you to keep only the metrics that are relevant for your use case, while dropping the rest.
+  - asset_type: DropRule
+    name: Allowlist - kubelet
+    slug: kubelet_allowlist
+    file: drop-rules/kubelet-allowlist.yaml
+    config_required: 'no'
+    author: Chronosphere
+    source: CS
+    description: An allow list for Kubelet metrics. This drop rule allows you to keep only the metrics that are relevant for your use case, while dropping the rest. 
