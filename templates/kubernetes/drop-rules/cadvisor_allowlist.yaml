@@ -1,0 +1,11 @@
+api_version: v1/config
+kind: DropRule
+spec:
+  slug: cadvisor_allowlist
+  name: Allowlist - cadvisor
+  mode: ENABLED
+  filters:
+    - name: __name__
+      value_glob: container_*
+    - name: __name__!
+      value_glob: '{container_cpu_cfs_throttled_periods_total,container_cpu_usage_seconds_total,container_fs_limit_bytes,container_fs_reads_bytes_total,container_fs_writes_bytes_total,container_last_seen,container_memory_usage_bytes,container_memory_working_set_bytes,container_network_receive_bytes_total,container_network_receive_errors_total,container_network_receive_packets_dropped_total,container_network_transmit_bytes_total,container_network_transmit_errors_total,container_network_transmit_packets_dropped_total,container_oom_events_total,container_oom_events_total,container_spec_cpu_period,container_spec_cpu_quota,container_spec_memory_limit_bytes,machine_cpu_cores,machine_memory_bytes,container_accelerator_duty_cycle,container_accelerator_memory_total,container_accelerator_memory_used,container_cpu_cfs_periods_total,container_cpu_cfs_throttled_seconds_total,container_start_time_seconds,container_fs_usage_bytes}'
