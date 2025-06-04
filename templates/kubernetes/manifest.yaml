@@ -125,7 +125,7 @@ asset_list:
       storage or a stable, unique network identity.
   - asset_type: DropRule
     name: Allowlist - cadvisor
-    slug: cadvisor_allowlist
+    slug: cadvisor-allowlist
     file: drop-rules/cadvisor-allowlist.yaml
     config_required: 'no'
     author: Chronosphere
@@ -134,7 +134,7 @@ asset_list:
       keep only the metrics that are relevant for your use case, while dropping the rest.
   - asset_type: DropRule
     name: Allowlist - Kube State Metrics
-    slug: kube_state_metrics_allowlist
+    slug: kube-state-metrics-allowlist
     file: drop-rules/kube-state-allowlist.yaml
     config_required: 'no'
     author: Chronosphere
@@ -142,7 +142,7 @@ asset_list:
     description: An allow list for Kube State Metrics. This drop rule allows you to keep only the metrics that are relevant for your use case, while dropping the rest.
   - asset_type: DropRule
     name: Allowlist - kubelet
-    slug: kubelet_allowlist
+    slug: kubelet-allowlist
     file: drop-rules/kubelet-allowlist.yaml
     config_required: 'no'
     author: Chronosphere
