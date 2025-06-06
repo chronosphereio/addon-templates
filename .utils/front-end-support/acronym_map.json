@@ -1,0 +1,19 @@
+{
+    "ad": "AD",
+    "aws": "AWS",
+    "gcp": "GCP",
+    "k8s": "K8s",
+    "ai": "AI",
+    "ml": "ML",
+    "ci": "CI",
+    "cd": "CD",
+    "api": "API",
+    "sdk": "SDK",
+    "db": "DB",
+    "ui": "UI",
+    "ux": "UX",
+    "sql": "SQL",
+    "nosql": "NoSQL",
+    "ec2": "EC2",
+    "ebs": "EBS"
+  }
