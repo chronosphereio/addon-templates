@@ -38,6 +38,21 @@ function sync_templates() {
 sync_templates --exclude "*" --include "*.yaml" --include "*.yml" --content-type "text/plain"
 sync_templates --exclude "*.yaml" --exclude "*.yml" --include "*"
 
+# =================================================================
+# START: Upload the acronym map from its correct location
+# =================================================================
+echo "Uploading acronym map..."
+aws s3 cp \
+  .utils/front-end-support/acronym_map.json \
+  "s3://${S3_BUCKET}/${PATH_PREFIX}/acronym_map.json" \
+  --content-type "application/json" \
+  --cache-control "no-store, no-cache, must-revalidate, max-age=0"
+# =================================================================
+# END: Added block
+# =================================================================
+
+
+echo "Generating and uploading manifest..."
 python3 .utils/generate-manifest-json.py > "$MANIFEST_TMP"
 
 aws s3 cp \
@@ -45,3 +60,5 @@ aws s3 cp \
   "s3://${S3_BUCKET}/${PATH_PREFIX}/manifest.json" \
   --content-type "application/json" \
   --cache-control "no-store, no-cache, must-revalidate, max-age=0"
+
+echo "Sync complete."
