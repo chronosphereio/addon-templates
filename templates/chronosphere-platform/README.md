@@ -16,7 +16,7 @@ README
 | :---: | :---: | :---: |
 |collection|✅ Available|1|
 |team|✅ Available|1|
-|dashboard|✅ Available|1|
+|dashboard|✅ Available|2|
 
 ## Requirements
 
@@ -28,3 +28,9 @@ README
 ## Alerting Overview
 
 - All Alerts
+
+## Drop Rule Overview
+
+- Enabled Rules - impact on datapoints 
+- potential ineffective and duplicate rules
+- Preview rules

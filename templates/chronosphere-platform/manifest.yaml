@@ -35,3 +35,12 @@ asset_list:
     name: Alerting Overview
     slug: alerting-overview
     source: CS
+  - asset_type: Dashboard
+    author: Chronosphere
+    config_required: 'no'
+    description: 'Overview of metric drop rules using Chronosphere drop rule metrics (enabled, preview, and effectiveness).'
+    file: dashboards/drop-rule-overview.yaml
+    screenshot: resources/drop-rule-overview-dash.png
+    name: Drop Rule Overview
+    slug: drop-rule-overview
+    source: CS
