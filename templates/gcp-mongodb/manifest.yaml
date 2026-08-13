@@ -1,0 +1,32 @@
+tech_type: mongodb
+description: Firestore document metrics as a MongoDB-style database monitoring analog on GCP.
+tags:
+  - mongodb
+  - firestore
+  - database
+  - infra
+  - gcp
+data_source_and_docs:
+  - title: Firestore monitoring
+    url: https://cloud.google.com/firestore/docs/monitor-metrics
+asset_list:
+  - asset_type: Collection
+    name: mongodb
+    slug: mongodb-collection
+    file: mongodb-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: mongodb
+    slug: mongodb-team
+    file: mongodb-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: GCP Firestore Overview (MongoDB)
+    slug: mongodb-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: GCP Firestore document read/write metrics (MongoDB-style dashboard layout).

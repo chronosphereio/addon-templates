@@ -1,0 +1,33 @@
+tech_type: redis
+description: Redis monitoring via redis_exporter Prometheus metrics.
+tags:
+  - redis
+  - cache
+  - database
+  - infra
+data_source_and_docs:
+  - title: redis_exporter
+    url: https://github.com/oliver006/redis_exporter
+  - title: Datadog redisdb dashboard (layout reference)
+    url: https://github.com/DataDog/integrations-core/tree/master/redisdb/assets/dashboards
+asset_list:
+  - asset_type: Collection
+    name: redis
+    slug: redis-collection
+    file: redis-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: redis
+    slug: redis-team
+    file: redis-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: Redis Overview
+    slug: redis-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: Self-hosted or managed Redis via redis_exporter — availability, performance, memory, clients, keyspace, replication.

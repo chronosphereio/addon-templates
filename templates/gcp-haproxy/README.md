@@ -1,14 +1,14 @@
 README
 ======
 
-# GCP Redis
+# GCP Haproxy
 
-GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
+HTTPS load balancer monitoring via GCP Cloud Monitoring (HAProxy traffic analog).
 
 ## Documentation
 
 - [Ingest Google Cloud Metrics with Chronosphere](https://docs.chronosphere.io/ingest/metrics-traces/gcp)
-- [Memorystore for Redis metrics](https://cloud.google.com/memorystore/docs/redis/supported-monitoring-metrics)
+- [HTTPS load balancing metrics](https://cloud.google.com/load-balancing/docs/https/https-logging-monitoring)
 
 ## Available Assets
 
@@ -27,19 +27,17 @@ GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
 - Chronosphere Google Cloud integration enabled for the target project
 - Cloud Monitoring metrics for the managed service ingested into Chronosphere
 
-## GCP Memorystore Redis Overview
+## GCP HTTPS Load Balancer Overview (HAProxy)
 
-- Performance Metrics
-- Memory Metrics
-- Base Activity Metrics
-- Key Metrics
-- Replication & Persistence
+- Frontends
+- Backends
+- Server Health
 
 ## Deploy
 
 ```bash
-cd templates/gcp-redis
-chronoctl apply -f gcp-redis-team.yaml
-chronoctl apply -f gcp-redis-collection.yaml
+cd templates/gcp-haproxy
+chronoctl apply -f haproxy-team.yaml
+chronoctl apply -f haproxy-collection.yaml
 chronoctl apply -f dashboards/overview.yaml
 ```

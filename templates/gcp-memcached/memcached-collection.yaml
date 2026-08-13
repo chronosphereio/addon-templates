@@ -1,0 +1,6 @@
+api_version: v1/config
+kind: Collection
+spec:
+  slug: memcached-collection
+  name: GCP Memorystore Memcached
+  team_slug: memcached-team

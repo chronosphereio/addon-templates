@@ -1,14 +1,14 @@
 README
 ======
 
-# GCP Redis
+# GCP Postgres
 
-GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
+Cloud SQL PostgreSQL monitoring via GCP Cloud Monitoring collector metrics.
 
 ## Documentation
 
 - [Ingest Google Cloud Metrics with Chronosphere](https://docs.chronosphere.io/ingest/metrics-traces/gcp)
-- [Memorystore for Redis metrics](https://cloud.google.com/memorystore/docs/redis/supported-monitoring-metrics)
+- [Cloud SQL monitoring](https://cloud.google.com/sql/docs/postgres/monitor-instance)
 
 ## Available Assets
 
@@ -27,19 +27,18 @@ GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
 - Chronosphere Google Cloud integration enabled for the target project
 - Cloud Monitoring metrics for the managed service ingested into Chronosphere
 
-## GCP Memorystore Redis Overview
+## GCP Cloud SQL PostgreSQL Overview
 
-- Performance Metrics
-- Memory Metrics
-- Base Activity Metrics
-- Key Metrics
-- Replication & Persistence
+- Connections
+- Transactions & Conflicts
+- Tuple Activity
+- Replication & Resources
 
 ## Deploy
 
 ```bash
-cd templates/gcp-redis
-chronoctl apply -f gcp-redis-team.yaml
-chronoctl apply -f gcp-redis-collection.yaml
+cd templates/gcp-postgres
+chronoctl apply -f postgres-team.yaml
+chronoctl apply -f postgres-collection.yaml
 chronoctl apply -f dashboards/overview.yaml
 ```

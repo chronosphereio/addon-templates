@@ -1,0 +1,32 @@
+tech_type: gcp-nginx
+description: HTTPS load balancer monitoring via GCP Cloud Monitoring (NGINX traffic analog).
+tags:
+  - nginx
+  - web
+  - infra
+  - load-balancer
+  - gcp
+data_source_and_docs:
+  - title: HTTPS load balancing metrics
+    url: https://cloud.google.com/load-balancing/docs/https/https-logging-monitoring
+asset_list:
+  - asset_type: Collection
+    name: gcp-nginx
+    slug: gcp-nginx-collection
+    file: gcp-nginx-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: gcp-nginx
+    slug: gcp-nginx-team
+    file: gcp-nginx-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: GCP HTTPS Load Balancer Overview (NGINX)
+    slug: gcp-nginx-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: GCP HTTPS load balancing — backend request rate, bytes, latencies, and TCP (NGINX traffic analog).

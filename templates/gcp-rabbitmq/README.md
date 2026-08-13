@@ -1,14 +1,14 @@
 README
 ======
 
-# GCP Redis
+# GCP Rabbitmq
 
-GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
+GCP Pub/Sub subscription metrics as a RabbitMQ queue monitoring analog.
 
 ## Documentation
 
 - [Ingest Google Cloud Metrics with Chronosphere](https://docs.chronosphere.io/ingest/metrics-traces/gcp)
-- [Memorystore for Redis metrics](https://cloud.google.com/memorystore/docs/redis/supported-monitoring-metrics)
+- [Pub/Sub monitoring](https://cloud.google.com/pubsub/docs/monitoring)
 
 ## Available Assets
 
@@ -27,19 +27,16 @@ GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
 - Chronosphere Google Cloud integration enabled for the target project
 - Cloud Monitoring metrics for the managed service ingested into Chronosphere
 
-## GCP Memorystore Redis Overview
+## GCP Pub/Sub Overview (RabbitMQ)
 
-- Performance Metrics
-- Memory Metrics
-- Base Activity Metrics
-- Key Metrics
-- Replication & Persistence
+- Queue Depth
+- Message Rates
 
 ## Deploy
 
 ```bash
-cd templates/gcp-redis
-chronoctl apply -f gcp-redis-team.yaml
-chronoctl apply -f gcp-redis-collection.yaml
+cd templates/gcp-rabbitmq
+chronoctl apply -f rabbitmq-team.yaml
+chronoctl apply -f rabbitmq-collection.yaml
 chronoctl apply -f dashboards/overview.yaml
 ```

@@ -1,14 +1,14 @@
 README
 ======
 
-# GCP Redis
+# GCP Mongodb
 
-GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
+Firestore document metrics as a MongoDB-style database monitoring analog on GCP.
 
 ## Documentation
 
 - [Ingest Google Cloud Metrics with Chronosphere](https://docs.chronosphere.io/ingest/metrics-traces/gcp)
-- [Memorystore for Redis metrics](https://cloud.google.com/memorystore/docs/redis/supported-monitoring-metrics)
+- [Firestore monitoring](https://cloud.google.com/firestore/docs/monitor-metrics)
 
 ## Available Assets
 
@@ -27,19 +27,16 @@ GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
 - Chronosphere Google Cloud integration enabled for the target project
 - Cloud Monitoring metrics for the managed service ingested into Chronosphere
 
-## GCP Memorystore Redis Overview
+## GCP Firestore Overview (MongoDB)
 
-- Performance Metrics
-- Memory Metrics
-- Base Activity Metrics
-- Key Metrics
-- Replication & Persistence
+- Operations
+- Document Counts
 
 ## Deploy
 
 ```bash
-cd templates/gcp-redis
-chronoctl apply -f gcp-redis-team.yaml
-chronoctl apply -f gcp-redis-collection.yaml
+cd templates/gcp-mongodb
+chronoctl apply -f mongodb-team.yaml
+chronoctl apply -f mongodb-collection.yaml
 chronoctl apply -f dashboards/overview.yaml
 ```

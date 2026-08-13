@@ -1,14 +1,14 @@
 README
 ======
 
-# GCP Redis
+# GCP Memcached
 
-GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
+GCP Memorystore Memcached monitoring via Cloud Monitoring collector metrics.
 
 ## Documentation
 
 - [Ingest Google Cloud Metrics with Chronosphere](https://docs.chronosphere.io/ingest/metrics-traces/gcp)
-- [Memorystore for Redis metrics](https://cloud.google.com/memorystore/docs/redis/supported-monitoring-metrics)
+- [Memorystore for Memcached metrics](https://cloud.google.com/memorystore/docs/memcached/supported-monitoring-metrics)
 
 ## Available Assets
 
@@ -27,19 +27,17 @@ GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
 - Chronosphere Google Cloud integration enabled for the target project
 - Cloud Monitoring metrics for the managed service ingested into Chronosphere
 
-## GCP Memorystore Redis Overview
+## GCP Memorystore Memcached Overview
 
-- Performance Metrics
-- Memory Metrics
-- Base Activity Metrics
-- Key Metrics
-- Replication & Persistence
+- Connections
+- Memory
+- Network
 
 ## Deploy
 
 ```bash
-cd templates/gcp-redis
-chronoctl apply -f gcp-redis-team.yaml
-chronoctl apply -f gcp-redis-collection.yaml
+cd templates/gcp-memcached
+chronoctl apply -f memcached-team.yaml
+chronoctl apply -f memcached-collection.yaml
 chronoctl apply -f dashboards/overview.yaml
 ```
