@@ -1,0 +1,6 @@
+api_version: v1/config
+kind: Collection
+spec:
+  slug: mongodb-collection
+  name: GCP Firestore Overview (MongoDB)
+  team_slug: mongodb-team

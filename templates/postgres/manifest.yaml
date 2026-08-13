@@ -1,0 +1,33 @@
+tech_type: postgres
+description: Comprehensive PostgreSQL monitoring via postgres_exporter database and bgwriter statistics.
+tags:
+  - postgres
+  - postgresql
+  - database
+  - infra
+data_source_and_docs:
+  - title: postgres_exporter
+    url: https://github.com/prometheus-community/postgres_exporter
+  - title: PostgreSQL monitoring
+    url: https://www.postgresql.org/docs/current/monitoring-stats.html
+asset_list:
+  - asset_type: Collection
+    name: postgres
+    slug: postgres-collection
+    file: postgres-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: postgres
+    slug: postgres-team
+    file: postgres-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: PostgreSQL Overview
+    slug: postgres-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: Availability, connections, transactions, cache, tuples, bgwriter, replication, and database size.

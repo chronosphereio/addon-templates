@@ -1,0 +1,5 @@
+api_version: v1/config
+kind: Team
+spec:
+  slug: gcp-nginx-team
+  name: GCP NGINX (HTTPS LB)

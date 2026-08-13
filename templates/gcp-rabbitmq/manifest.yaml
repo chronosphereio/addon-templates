@@ -1,0 +1,33 @@
+tech_type: rabbitmq
+description: GCP Pub/Sub subscription metrics as a RabbitMQ queue monitoring analog.
+tags:
+  - rabbitmq
+  - pubsub
+  - messaging
+  - queue
+  - infra
+  - gcp
+data_source_and_docs:
+  - title: Pub/Sub monitoring
+    url: https://cloud.google.com/pubsub/docs/monitoring
+asset_list:
+  - asset_type: Collection
+    name: rabbitmq
+    slug: rabbitmq-collection
+    file: rabbitmq-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: rabbitmq
+    slug: rabbitmq-team
+    file: rabbitmq-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: GCP Pub/Sub Overview (RabbitMQ)
+    slug: rabbitmq-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: GCP Pub/Sub subscription metrics — queue depth, message age, and pull/ack rates (RabbitMQ-style layout).

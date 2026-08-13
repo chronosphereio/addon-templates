@@ -1,0 +1,31 @@
+tech_type: memcached
+description: GCP Memorystore Memcached monitoring via Cloud Monitoring collector metrics.
+tags:
+  - memcached
+  - cache
+  - infra
+  - gcp
+data_source_and_docs:
+  - title: Memorystore for Memcached metrics
+    url: https://cloud.google.com/memorystore/docs/memcached/supported-monitoring-metrics
+asset_list:
+  - asset_type: Collection
+    name: memcached
+    slug: memcached-collection
+    file: memcached-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: memcached
+    slug: memcached-team
+    file: memcached-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: GCP Memorystore Memcached Overview
+    slug: memcached-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: GCP Memorystore for Memcached — node connections, memory utilization, and network throughput.
