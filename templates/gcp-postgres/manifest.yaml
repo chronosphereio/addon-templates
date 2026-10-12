@@ -1,0 +1,32 @@
+tech_type: postgres
+description: Cloud SQL PostgreSQL monitoring via GCP Cloud Monitoring collector metrics.
+tags:
+  - postgres
+  - postgresql
+  - database
+  - infra
+  - gcp
+data_source_and_docs:
+  - title: Cloud SQL monitoring
+    url: https://cloud.google.com/sql/docs/postgres/monitor-instance
+asset_list:
+  - asset_type: Collection
+    name: postgres
+    slug: postgres-collection
+    file: postgres-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: postgres
+    slug: postgres-team
+    file: postgres-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: GCP Cloud SQL PostgreSQL Overview
+    slug: postgres-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: GCP Cloud SQL for PostgreSQL — availability, backends, CPU, disk, memory, network, deadlocks, tuples, and replication.

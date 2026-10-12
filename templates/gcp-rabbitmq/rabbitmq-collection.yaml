@@ -1,0 +1,6 @@
+api_version: v1/config
+kind: Collection
+spec:
+  slug: rabbitmq-collection
+  name: GCP Pub/Sub Overview (RabbitMQ)
+  team_slug: rabbitmq-team

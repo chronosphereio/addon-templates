@@ -1,0 +1,32 @@
+tech_type: mongodb
+description: Comprehensive MongoDB monitoring via Percona/mongodb_exporter serverStatus metrics.
+tags:
+  - mongodb
+  - database
+  - infra
+data_source_and_docs:
+  - title: mongodb_exporter
+    url: https://github.com/percona/mongodb_exporter
+  - title: MongoDB serverStatus
+    url: https://www.mongodb.com/docs/manual/reference/command/serverStatus/
+asset_list:
+  - asset_type: Collection
+    name: mongodb
+    slug: mongodb-collection
+    file: mongodb-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: mongodb
+    slug: mongodb-team
+    file: mongodb-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: MongoDB Overview
+    slug: mongodb-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: Connections, opcounters, queues, memory, WiredTiger cache, asserts, and replication.

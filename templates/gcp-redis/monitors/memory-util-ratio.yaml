@@ -3,7 +3,7 @@ kind: Monitor
 spec:
   slug: gcp-redis-memory-usage-ratio-too-high
   name: GCP Redis Memory Usage Ratio too high
-  collection_slug: gcp-collection
+  collection_slug: gcp-redis-collection
   signal_grouping:
     label_names:
       - project_id

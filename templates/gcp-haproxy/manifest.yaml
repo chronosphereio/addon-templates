@@ -1,0 +1,32 @@
+tech_type: haproxy
+description: HTTPS load balancer monitoring via GCP Cloud Monitoring (HAProxy traffic analog).
+tags:
+  - haproxy
+  - load-balancer
+  - proxy
+  - infra
+  - gcp
+data_source_and_docs:
+  - title: HTTPS load balancing metrics
+    url: https://cloud.google.com/load-balancing/docs/https/https-logging-monitoring
+asset_list:
+  - asset_type: Collection
+    name: haproxy
+    slug: haproxy-collection
+    file: haproxy-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: haproxy
+    slug: haproxy-team
+    file: haproxy-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: GCP HTTPS Load Balancer Overview (HAProxy)
+    slug: haproxy-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: GCP HTTPS load balancing — backend sessions, request rate, bytes, latencies, and TCP (HAProxy traffic analog).

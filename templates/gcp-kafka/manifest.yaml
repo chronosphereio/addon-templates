@@ -1,0 +1,32 @@
+tech_type: kafka
+description: GCP Managed Kafka monitoring via Cloud Monitoring collector metrics.
+tags:
+  - kafka
+  - streaming
+  - messaging
+  - infra
+  - gcp
+data_source_and_docs:
+  - title: Managed Service for Apache Kafka metrics
+    url: https://cloud.google.com/managed-service-for-apache-kafka/docs/monitor-cluster
+asset_list:
+  - asset_type: Collection
+    name: kafka
+    slug: kafka-collection
+    file: kafka-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: kafka
+    slug: kafka-team
+    file: kafka-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: GCP Managed Kafka Overview
+    slug: kafka-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: GCP Managed Service for Apache Kafka — request rate, latencies, throughput, consumer groups, errors, and CPU.

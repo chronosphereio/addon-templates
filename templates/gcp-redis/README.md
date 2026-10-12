@@ -1,41 +1,45 @@
-
 README
 ======
 
 # GCP Redis
 
+GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
 
-Memorystore for Redis is a fully managed Redis service for Google Cloud. Applications running on Google Cloud can achieve extreme performance by leveraging the highly scalable, available, secure Redis service without the burden of managing complex Redis deployments.
 ## Documentation
 
-- [Ingest Google Cloud Metrics with chronosphere](https://docs.chronosphere.io/ingest/metrics-traces/gcp)
-- [Google Cloud Redis Metrics](https://cloud.google.com/monitoring/api/metrics_gcp#gcp-redis)
+- [Ingest Google Cloud Metrics with Chronosphere](https://docs.chronosphere.io/ingest/metrics-traces/gcp)
+- [Memorystore for Redis metrics](https://cloud.google.com/memorystore/docs/redis/supported-monitoring-metrics)
 
 ## Available Assets
 
-|Asset Type|Status|Count|
+| Asset Type | Status | Count |
 | :---: | :---: | :---: |
-|collection|✅ Available|1|
-|team|✅ Available|1|
-|dashboard|✅ Available|1|
-|monitor|✅ Available|1|
+| collection | ✅ Available | 1 |
+| dashboard | ✅ Available | 1 |
+| team | ✅ Available | 1 |
 
 ## Requirements
 
-- A Team to own the Collection (Either included or custom team)
-- A Collection to own the asset (Either included or custom collection)
+- A Team to own the Collection (either included or a custom team)
+- A Collection to own the asset (either included or a custom collection)
 - A Collector to provide data
-- Chronosphere Tenant
+- Chronosphere tenant
+- Chronosphere Google Cloud integration enabled for the target project
+- Cloud Monitoring metrics for the managed service ingested into Chronosphere
 
-## GCP Memorystore for Redis Dashboard
+## GCP Memorystore Redis Overview
 
-- Overview
-- Client Connections
-- Commands
-- System
-- Keyspace
-- Replication
+- Performance Metrics
+- Memory Metrics
+- Base Activity Metrics
+- Key Metrics
+- Replication & Persistence
 
-## Monitors
+## Deploy
 
-- GCP Redis Memory Usage Ratio too high
+```bash
+cd templates/gcp-redis
+chronoctl apply -f gcp-redis-team.yaml
+chronoctl apply -f gcp-redis-collection.yaml
+chronoctl apply -f dashboards/overview.yaml
+```

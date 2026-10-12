@@ -1,0 +1,6 @@
+api_version: v1/config
+kind: Collection
+spec:
+  slug: haproxy-collection
+  name: GCP HTTPS Load Balancer Overview (HAProxy)
+  team_slug: haproxy-team

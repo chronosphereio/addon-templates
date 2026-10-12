@@ -1,44 +1,33 @@
 tech_type: gcp-redis
-description: Memorystore for Redis is a fully managed Redis service for Google Cloud. Applications running on Google Cloud can achieve extreme performance by leveraging the highly scalable, available, secure Redis service without the burden of managing complex Redis deployments.
+description: GCP Memorystore for Redis monitoring via Cloud Monitoring collector metrics.
 tags:
-  - google
-  - gcp
   - redis
-  - memory
+  - cache
   - database
-icon: resources/google-cloud-logo.svg
+  - infra
+  - gcp
+  - memorystore
 data_source_and_docs:
-  - title: Ingest Google Cloud Metrics with chronosphere
-    url: https://docs.chronosphere.io/ingest/metrics-traces/gcp
-  - title: Google Cloud Redis Metrics
-    url: https://cloud.google.com/monitoring/api/metrics_gcp#gcp-redis
+  - title: Memorystore for Redis metrics
+    url: https://cloud.google.com/memorystore/docs/redis/supported-monitoring-metrics
 asset_list:
   - asset_type: Collection
-    name: gcp
-    slug: gcp-collection
-    file: gcp-collection.yaml
+    name: gcp-redis
+    slug: gcp-redis-collection
+    file: gcp-redis-collection.yaml
     config_required: 'no'
-    description: Please modify if necessary
+    description: Collection for OOTB dashboard assets
   - asset_type: Team
-    name: gcp
-    slug: gcp-team
-    file: gcp-team.yaml
+    name: gcp-redis
+    slug: gcp-redis-team
+    file: gcp-redis-team.yaml
     config_required: 'no'
-    description: Please modify if necessary
+    description: Team for OOTB dashboard assets
   - asset_type: Dashboard
-    name: GCP Memorystore for Redis 
-    slug: gcp-datastore
-    file: dashboards/gcp-redis.yaml
+    name: GCP Memorystore Redis Overview
+    slug: gcp-redis-overview
+    file: dashboards/overview.yaml
     config_required: 'no'
-    author: Chronosphere
+    author: Chronosphere CS
     source: CS
-    description: Dashboard to display metrics related to GCP Memory Story for redis, primarily focused on Redis Instance metrics.
-  - asset_type: Monitor
-    name: GCP Redis Memory Usage Ratio too high 
-    slug: gcp-redis-memory-usage-ratio-too-high
-    file: monitors/memory-util-ratio.yaml
-    config_required: 'no'
-    author: Chronosphere
-    source: CS
-    description: Dashboard to display metrics related to GCP Memory Story for redis, primarily focused on Redis Instance metrics.
-
+    description: GCP Memorystore for Redis — overview, performance, memory, activity, keys, and replication.

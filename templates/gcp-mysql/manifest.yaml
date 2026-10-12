@@ -1,0 +1,32 @@
+tech_type: mysql
+description: Cloud SQL MySQL monitoring via GCP Cloud Monitoring collector metrics.
+tags:
+  - mysql
+  - mariadb
+  - database
+  - infra
+  - gcp
+data_source_and_docs:
+  - title: Cloud SQL MySQL monitoring
+    url: https://cloud.google.com/sql/docs/mysql/monitor-instance
+asset_list:
+  - asset_type: Collection
+    name: mysql
+    slug: mysql-collection
+    file: mysql-collection.yaml
+    config_required: 'no'
+    description: Collection for OOTB dashboard assets
+  - asset_type: Team
+    name: mysql
+    slug: mysql-team
+    file: mysql-team.yaml
+    config_required: 'no'
+    description: Team for OOTB dashboard assets
+  - asset_type: Dashboard
+    name: GCP Cloud SQL MySQL Overview
+    slug: mysql-overview
+    file: dashboards/overview.yaml
+    config_required: 'no'
+    author: Chronosphere CS
+    source: CS
+    description: GCP Cloud SQL for MySQL — connections, query throughput, InnoDB cache, slow queries, and replication.
