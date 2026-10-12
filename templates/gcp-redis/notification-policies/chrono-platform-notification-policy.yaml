@@ -3,7 +3,7 @@ kind: NotificationPolicy
 spec:
   slug: gcp-notification-policy
   name: GCP Notification Policy
-  team_slug: gcp-team
+  team_slug: gcp-redis-team
   routes:
     defaults:
       warn: {}
